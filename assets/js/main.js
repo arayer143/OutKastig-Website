@@ -3,6 +3,15 @@
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
+  /**
+   * Preloader
+   */
+  const preloader = document.querySelector('#preloader');
+  if (preloader) {
+    window.addEventListener('load', () => {
+      preloader.remove();
+    });
+  }
 
   /**
    * Mobile nav toggle
@@ -186,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   function aos_init() {
     AOS.init({
-      duration: 200,
+      duration: 800,
       easing: 'slide',
       once: true,
       mirror: false
