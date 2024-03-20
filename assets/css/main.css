@@ -772,6 +772,44 @@ margin-top: 3rem;
 
 
 /*** Service Start ***/
+
+
+
+.sub-title {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  color: var(--bs-primary);
+}
+
+.sub-title::before {
+  content: "";
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin-top: 8px;
+  margin-right: -100px;
+  border: 1px solid var(--bs-primary) !important;
+}
+
+.sub-title::after {
+  content: "";
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin-bottom: 8px;
+  margin-right: -50px;
+  border: 1px solid var(--bs-primary) !important;
+}
+
+
+
+
+
 .service .service-item-list {
   box-shadow: 0 0 45px rgba(0, 0, 0, .2) ;
   
@@ -985,6 +1023,15 @@ text-align: center;
 .features .tab-content {
   margin-top: 30px;
 }
+
+.img-tab{
+  max-height: 400px;
+  max-width: 500px;
+}
+
+
+
+
 
 .features .tab-pane h3 {
   font-weight: 700;
