@@ -1758,7 +1758,7 @@ section {
 
 /* Box Text */
 .box span {
-  position: absolute;
+  
   display: block;
   opacity: 0.8;
   z-index: 7;
@@ -2103,7 +2103,7 @@ section {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1445px) {
   .info-section {
     display: block;
     padding: 0;
@@ -2161,6 +2161,20 @@ section {
     width: 126px;
     height: 65px;
   }
+}
+
+@media screen and (max-width: 729px) {
+
+  .info-section .sub-style .sub-title{
+    font-size: 25px;
+  }
+  .right-part {
+   
+    height: 434px;
+    width: 534px;
+  }
+
+
 }
 
 
@@ -3033,9 +3047,9 @@ text-align: center;
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-.about h2 {
-  font-size: 48px;
-  font-weight: 700;
+.about h6 {
+  font-size: 28px;
+  font-weight: 400;
   font-family: var(--font-secondary);
   margin: 30px 0;
 }
