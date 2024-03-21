@@ -704,6 +704,7 @@ section {
   border-radius: 120px;
   position: absolute;
   animation: 30s infinite;
+  transition: font-size 12s; /* transition is set to 'font-size 12s' */
 }
 
 /* Box nth-child */
@@ -1763,6 +1764,7 @@ section {
   opacity: 0.8;
   z-index: 7;
   text-align: center;
+  
 }
 
 .box:nth-child(1) span {
@@ -1786,6 +1788,7 @@ section {
   top: 50%;
   transform: translate(-50%, -50%);
   left: 15%;
+  
 }
 
 /* Box Background-Image */
