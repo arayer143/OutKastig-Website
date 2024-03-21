@@ -176,7 +176,7 @@ var typing = new Typed(".text", {
 
 // GSAP
 gsap.registerPlugin(ScrollTrigger);
-const introsplitTypes = document.querySelectorAll(".left-part h1");
+const introsplitTypes = document.querySelectorAll(".info-section .sub-style .sub-title .text");
 introsplitTypes.forEach((char, i) => {
   const i_text = new SplitType(char);
   gsap.to(i_text.chars, {

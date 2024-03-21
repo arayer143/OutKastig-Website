@@ -50,6 +50,14 @@ h5
 }
 
 
+h4{
+  color: #000;
+  font-size: 35px;
+
+}
+
+
+
 h6{
   font-size: 40px;
   color: #000;
@@ -570,6 +578,17 @@ section {
   z-index: -1;
 }
 
+
+.info-section .text {
+  color: black;
+  display: block;
+  height: 200px;
+  padding: 3rem;
+ font-size: 30px; 
+}
+
+
+
 /* left part */
 .left-part {
  margin-left: 4rem;
@@ -588,12 +607,6 @@ section {
   text-transform: uppercase;
 }
 
-.left-part h1 .text {
-  color: black;
-  display: block;
-  height: 200px;
-  padding: 3rem;
-}
 
 .left-part h1 .d-flex {
   display: flex;
@@ -613,6 +626,7 @@ section {
   width: 72%;
   margin: 20px 0 0;
   color: #fff;
+  background-color: whitesmoke;
   font-size: 16px;
   font-style: normal;
   font-weight: normal;
@@ -621,106 +635,6 @@ section {
   opacity: 0.8;
 }
 
-/* button */
-.book-link {
-  margin: 40px 0 0;
-  padding: 0;
-  border: 0;
-  font-size: 56px;
-  line-height: 1;
-  color: #f1f1f1;
-  letter-spacing: 0.25px;
-  text-transform: uppercase;
-  font-family: "Extenda Trial 20 Micro";
-  font-weight: 300;
-  font-style: normal;
-  display: inline-flex;
-  align-items: center;
-  gap: 28px;
-  position: relative;
-  text-decoration: none;
-}
-
-.book-link .linktext {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  color: #000;
-}
-
-.book-link .linktext::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 6px;
-  width: 100%;
-  height: 3px;
-  background-color: #ffffff;
-  transform: scaleX(1);
-  transition: transform 250ms ease-in-out;
-  transform-origin: 0 0;
-}
-
-.book-link:hover .linktext:before {
-  transform: scaleX(0);
-  transform-origin: 100% 100%;
-}
-
-.book-link .arrow {
-  height: 36px;
-  width: 36px;
-  top: -5px;
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-}
-
-.book-link .arrow::before,
-.book-link .arrow::after {
-  position: absolute;
-  content: "";
-  background-color: #f1e728;
-  transition: all ease-in-out 0.35s;
-  transform-origin: 0 0;
-  border-radius: 30px;
-}
-
-.book-link .arrow::before {
-  height: 2px;
-  width: 100%;
-  top: 0;
-  right: 0;
-}
-
-.book-link .arrow::after {
-  width: 2px;
-  height: 100%;
-  top: 0;
-  right: 0;
-}
-
-.book-link:hover .arrow::before {
-  width: 65%;
-}
-
-.book-link:hover .arrow::after {
-  height: 65%;
-}
-
-.book-link .arrow span {
-  background-color: #f1e728;
-  height: 2px;
-  width: 100%;
-  display: inline-block;
-  transform: rotate(-45deg) translate(-3px, -1px);
-  transform-origin: right top;
-  border-radius: 30px;
-  position: relative;
-  transition: all ease-in-out 0.35s;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 
 .book-link .arrow span::before {
   background-color: blue;
@@ -749,7 +663,7 @@ section {
   content: "";
   border-radius: 197.5px 0px;
   opacity: 0.4;
-  background: #f1e728;
+  background: black;
   filter: blur(112px);
   height: 35%;
   width: 55%;
@@ -1847,7 +1761,8 @@ section {
   position: absolute;
   display: block;
   opacity: 0.8;
-  z-index: 5;
+  z-index: 7;
+  text-align: center;
 }
 
 .box:nth-child(1) span {
@@ -2037,6 +1952,8 @@ section {
   width: 181px;
   height: 111px;
   position: relative;
+  color: black;
+
 }
 
 .bg-circle-h-line img {
@@ -2045,6 +1962,7 @@ section {
   height: auto;
   position: absolute;
   left: 0;
+  color: black;
 }
 
 .bg-circle-h-line img:nth-child(1) {
@@ -2121,13 +2039,13 @@ section {
 /*=== Responsive ===*/
 @media screen and (min-width: 1500px) {
   .info-section {
-    padding-left: 120px;
+    padding-left: 90px;
   }
 }
 
 @media screen and (min-width: 1400px) {
   .info-section {
-    padding-left: 100px;
+    padding-left: 50px;
   }
 }
 
@@ -2137,8 +2055,8 @@ section {
   }
 
   .right-part {
-    height: 400px;
-    width: 400px;
+    height: 600px;
+    width: 600px;
   }
 
   .d-flex {
@@ -2189,6 +2107,7 @@ section {
   .info-section {
     display: block;
     padding: 0;
+    height: 100%;
   }
 
   .bg-line {
@@ -2200,8 +2119,8 @@ section {
   }
 
   .right-part {
-    height: 334px;
-    width: 334px;
+    height: 634px;
+    width: 634px;
   }
 
   .left-part h1 .text {
