@@ -11,9 +11,9 @@
 
 /* Colors */
 :root {
-  --color-default: #364d59;
-  --color-primary: #feb900;
-  --color-secondary: #52565e;
+  --color-default: grey;
+  --color-primary: #372d91;
+  --color-secondary: #020c1f;
 }
 
 /* Smooth scroll behavior */
@@ -44,9 +44,15 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
-  font-family: var(--font-primary);
+h5
+ {
+  font-family: var(--font-secondary);
+}
+
+
+h6{
+  font-size: 40px;
+  color: #000;
 }
 
 /*--------------------------------------------------------------
@@ -99,6 +105,9 @@ section {
     max-width: 60%;
   }
 }
+
+
+
 
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -537,6 +546,12 @@ section {
 
 
 /*Start of the social icons */
+.hero-social-container{
+  text-align: left;
+  margin-right: 5rem;
+}
+
+
 
 .rounded-social-buttons {
   text-align: center;
@@ -779,7 +794,8 @@ margin-top: 3rem;
   position: relative;
   display: inline-block;
   text-transform: uppercase;
-  color: var(--bs-primary);
+  color: black;
+  font-size: 40px;
 }
 
 .sub-title::before {
@@ -2037,6 +2053,7 @@ text-align: center;
   display: inline-block;
   padding: 12px 40px;
   border-radius: 50px;
+  background: #222428;
   transition: 0.5s;
   margin: 10px;
   color: #fff;
@@ -2105,12 +2122,17 @@ text-align: center;
 --------------------------------------------------------------*/
 .footer {
   color: #fff;
-  background: url("../assets/img/page-header.webp") top center no-repeat;
+
   background-size: cover;
   font-size: 14px;
   padding: 5rem;
   position: relative;
+  background: linear-gradient(-45deg, #b8aba7,  #d5236d);
+
 }
+
+
+
 
 .footer:before {
   content: "";
