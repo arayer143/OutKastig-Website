@@ -28,6 +28,7 @@ body {
   font-family: var(--font-default);
   color: var(--color-default);
   overflow-x: hidden;
+  overflow-y: hidden ;
 }
 
 a {
@@ -673,10 +674,11 @@ section {
 }
 
 /*** About Start ***/
-.about .about-img {
+.about-img {
   position: relative;
   overflow: hidden;
-  height: 100%;
+  max-width: 700px;
+  height: 70%;
   border-radius: 10px;
 }
 
