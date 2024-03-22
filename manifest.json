@@ -1,0 +1,38 @@
+{
+    "name": "OutKast Industrial Group", 
+    "short_name": "OutKast I.G.",
+    "start_url": "/index.html",
+    "description": "OutKast Industrial Group ",
+    "display": "standalone",
+    "background-color": "",
+    "theme_color": "#222222",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "assets/img/outkast-logo.webp",
+            "type": "image/png",
+            "sizes": "144x144"
+        }
+    ],
+
+    "screenshots" : [
+        {
+          "src": "assets/img/outkast-logo.webp",
+          "sizes": "2500x1500",
+          "type": "image/png",
+          "form_factor": "wide",
+      
+          "label": "OutKast I.G. Logo"
+        },
+        {
+            "src": "assets/img/outkast-logo.webp",
+            "sizes": "2500x1500",
+            "type": "image/png",
+        
+            "form_factor": "narrow",
+            "label": "OutKast I.G. Logo"
+          }
+
+    ]
+    
+}
