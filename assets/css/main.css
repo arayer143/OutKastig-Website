@@ -12,7 +12,7 @@
 /* Colors */
 :root {
   --color-default: grey;
-  --color-primary: #372d91;
+  --color-primary: #555555 ;
   --color-secondary: #020c1f;
 }
 
@@ -37,7 +37,7 @@ a {
 }
 
 a:hover {
-  color: #ffc732;
+
   text-decoration: none;
 }
 
@@ -830,16 +830,6 @@ margin-top: 3rem;
 
 
 
-@media (max-width: 367px){
-.rounded-social-buttons .social-button{
-  width: 6rem;
-  height: 2.5rem;
-  font-size: 20px;
-
-
-}
-
-}
 
 
 
@@ -1850,7 +1840,7 @@ text-align: center;
   line-height: 0;
   color: var(--color-primary);
   border-radius: 50%;
-  border: 2px dotted #ffd565;
+  border: 2px solid #1d273a;
 }
 
 .contact .info-item h3 {
