@@ -141,10 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /**
-   * Initiate pURE cOUNTER
-   */
-  new PureCounter();
+
 
   /**
    * Animation on scroll function and init
