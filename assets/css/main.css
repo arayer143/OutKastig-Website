@@ -682,8 +682,8 @@ section {
 .about-img {
   position: relative;
   overflow: hidden;
-  max-width: 700px;
-  height: 70%;
+ 
+
   border-radius: 10px;
 }
 
