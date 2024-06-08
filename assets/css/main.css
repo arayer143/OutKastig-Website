@@ -1267,9 +1267,8 @@ text-align: center;
 # Alt Services Section
 --------------------------------------------------------------*/
 .alt-services .img-bg {
-  background-size: cover;
-  background-position: center center;
-  min-height: 400px;
+
+height: 200px;
 }
 
 .alt-services h3 {
