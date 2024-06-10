@@ -1047,7 +1047,7 @@ $secondary: #000035;
     transition: 0.3s;
   }
   
-  .services .service-item h5 {
+  .services .service-item h3 {
     color: black;
     font-weight: 700;
     margin: 0 0 20px 0;
@@ -1055,7 +1055,7 @@ $secondary: #000035;
     font-size: 22px;
     position: relative;
     display: inline-block;
-    border-bottom: 4px solid #ebebed;
+    border-bottom: 2px solid #ebebed;
     transition: 0.3s;
   }
   
@@ -1072,11 +1072,11 @@ $secondary: #000035;
   }
   
   .services .service-item:hover .icon:before {
-    background: var($primary);
+    background: $primary;
   }
   
   .services .service-item:hover h3 {
-    border-color: var($primary);
+    border-color: $primary;
   }
   
   /*--------------------------------------------------------------
@@ -1492,7 +1492,7 @@ $secondary: #000035;
   
   
   /*--------------------------------------------------------------
-  # Servie Cards Section
+  # Services Cards Section
   --------------------------------------------------------------*/
 #services-cards{
   align-items: center;
@@ -1502,7 +1502,6 @@ $secondary: #000035;
     font-size: 20px;
     font-weight: 700;
     text-align: center;
-    margin-left: 3rem;
     color: var($secondary);
   }
   
