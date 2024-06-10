@@ -1494,14 +1494,29 @@ $secondary: #000035;
   /*--------------------------------------------------------------
   # Servie Cards Section
   --------------------------------------------------------------*/
+#services-cards{
+  align-items: center;
+}
+
   .services-cards h3 {
     font-size: 20px;
     font-weight: 700;
+    text-align: center;
+    margin-left: 3rem;
     color: var($secondary);
   }
   
   .services-cards p {
     font-size: 15px;
+  }
+
+  .services-cards img{
+    max-width: 200px;
+    text-align: center;
+    margin-left: 2rem;
+    padding: 2rem;
+    justify-content: center;
+
   }
   
   .services-cards ul li {
