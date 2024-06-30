@@ -1,0 +1,131 @@
+/*** About Start ***/
+.about-img {
+    position: relative;
+    overflow: hidden;
+   
+  
+    border-radius: 10px;
+  }
+  
+  .about .about-img .about-img-inner {
+    position: absolute;
+    left: 1rem; 
+    bottom: 0; 
+    border: 10px solid; 
+    border-color: var(--bs-white) var(--bs-white) var(--bs-white) var(--bs-white);
+    border-radius: 50%;
+    color: #000;
+    top: 7rem;
+  
+  }
+  
+  .about .about-img .about-experience {
+    position: absolute;
+    top: 124px; 
+    left: -125px; 
+    transform: rotate(-90deg);
+    background: transparent;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 4px;
+  }
+  
+  
+  .about .about-page-img img{
+    float: left;
+    max-width: 200px;
+    margin-bottom: 2rem; 
+    margin-right: 4rem;
+    border-radius: 2rem;
+  }
+  
+  
+  
+  /*** About End ***/
+
+
+   /*--------------------------------------------------------------
+  # About Section
+  --------------------------------------------------------------*/
+  .about h6 {
+    font-size: 28px;
+    font-weight: 400;
+    font-family: var($font-secondary);
+    margin: 30px 0;
+  }
+  
+  @media (min-width: 991px) {
+    .about h2 {
+      max-width: 65%;
+      margin: 0 0 80px 0;
+    }
+  }
+  
+  .about .our-story {
+    padding: 40px;
+    background-color: #f5f6f7;
+  }
+  
+  @media (min-width: 991px) {
+    .about .our-story {
+      padding-right: 35%;
+    }
+  }
+  
+  .about .our-story h4 {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #838893;
+  }
+  
+  .about .our-story h3 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var($secondary);
+  }
+  
+  .about .our-story p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .about ul {
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
+  }
+  
+  .about ul li {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .about ul i {
+    font-size: 20px;
+    margin-right: 4px;
+    color: var($primary);
+  }
+  
+  .about .watch-video i {
+    font-size: 32px;
+    transition: 0.3s;
+    color: var($primary);
+  }
+  
+  .about .watch-video a {
+    font-weight: 600;
+    color: var($secondary);
+    margin-left: 8px;
+    transition: 0.3s;
+  }
+  
+  .about .watch-video:hover a {
+    color: var($primary);
+  }
+  
+  
+  
+  
+  

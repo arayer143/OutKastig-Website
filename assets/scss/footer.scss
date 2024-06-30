@@ -1,0 +1,88 @@
+  /*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+  .footer {
+    color: #fff;
+  
+    background-size: cover;
+    font-size: 14px;
+    padding: 5rem;
+    position: relative;
+    background: linear-gradient(45deg, #bab6df,   #273755);
+  
+  }
+  
+  
+  
+  
+  .footer:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    inset: 0;
+  }
+  
+  .footer .footer-content .footer-info {
+    margin-bottom: 30px;
+    text-align: center;
+    
+  }
+  
+  .footer .footer-content .footer-info h3 {
+    font-size: 28px;
+    margin: 0 0 20px 0;
+    padding: 2px 0 2px 0;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .footer .footer-content .footer-info h3 span {
+    color: var($primary);
+  }
+  
+  .footer .footer-content .footer-info p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 0;
+    font-family: var(--font-primary);
+    color: #fff;
+  }
+  
+  .footer .footer-content .social-links {
+    text-align: center;
+    align-items: center;
+    
+  }
+  
+  .footer .footer-content .social-links a {
+    font-size: 18px;
+    display: infline-block;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    line-height: 1;
+    margin-right: 8px;
+    border-radius: 4px;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+    justify-content: center;
+  }
+  
+  .footer .footer-content .social-links a:hover {
+    background: var($primary);
+    text-decoration: none;
+  }
+  
+  
+  
+  .footer .footer-legal .credits {
+    padding-top: 4px;
+    font-size: 13px;
+    color: #fff;
+  }
+  
+  .footer .footer-legal .credits a {
+    color: var($primary);
+  }
+

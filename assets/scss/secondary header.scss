@@ -1,0 +1,27 @@
+ /*--------------------------------------------------------------
+  # secondary-page-header
+  --------------------------------------------------------------*/
+  .secondary-page-header {
+    padding: 140px 0 60px 0;
+    min-height: 30vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .secondary-page-header:before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    inset: 0;
+  }
+  
+  .secondary-page-header h2 {
+    font-size: 56px;
+    font-weight: 500;
+    color: #fff;
+    font-family: $font-secondary;
+  }
+  
+  

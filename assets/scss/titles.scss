@@ -1,0 +1,131 @@
+/*--------------------------------------------------------------
+  # Sections & Section Header
+  --------------------------------------------------------------*/
+  section {
+    padding: 80px 0;
+    overflow: hidden;
+  }
+  
+  .section-bg {
+    background-color: #f5f6f7;
+  }
+
+
+  .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .section-title h2 {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    position: relative;
+    color: rgb(56, 56, 56);
+  }
+  .section-title h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+  }
+  .section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: $secondary;
+    bottom: 0;
+    left: calc(50% - 20px);
+  }
+  
+  
+  .section-header {
+    text-align: center;
+    padding-bottom: 70px;
+  }
+  
+  .section-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    position: relative;
+    color: #2e3135;
+  }
+  
+  .section-header h2:before,
+  .section-header h2:after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background: var($primary);
+    display: inline-block;
+  }
+  
+  .section-header h2:before {
+    margin: 0 15px 10px 0;
+  }
+  
+  .section-header h2:after {
+    margin: 0 0 10px 15px;
+  }
+  
+  .section-header p {
+    margin: 0 auto 0 auto;
+  }
+  
+  @media (min-width: 1199px) {
+    .section-header p {
+      max-width: 60%;
+    }
+  }
+  
+
+
+    
+  .sub-title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .info-section .sub-style .sub-title{
+    font-size: 40px;
+  }
+  
+  .sub-title::before {
+    content: "";
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-top: 8px;
+    margin-right: -100px;
+    border: 1px solid;
+    border-color: $primary;
+  }
+  
+  .sub-title::after {
+    content: "";
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-bottom: 8px;
+    margin-right: -50px;
+    border: 1px solid;
+    border-color: $primary;
+  }
+  
+  
+  
