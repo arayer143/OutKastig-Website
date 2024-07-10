@@ -126,6 +126,98 @@
     border: 1px solid;
     border-color: $primary;
   }
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# alternate-section-header
+--------------------------------------------------------------*/
+
+  
+#alternate-page-title {
+
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding: 90px 0 40px 0;
+
+  @media (min-width: 1024px) {
+    background-attachment: fixed;
+  }
+
+  &:before {
+    content: "";
+    background:rgba(#0d1429, 0.7);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    
+
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  
+    color: #fff;
+  }
+
+  p {
+    font-size: 14px;
+    margin-bottom: 2px;
+    color: #fff;
+    max-width: 370px;
+    
+  }
+
+
+
+  .btn {
+    color: $primary;
+    background: $secondary;
+    font-weight: 500;
+    font-size: 15px;
+
+    letter-spacing: 1px;
+    padding: 10px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    box-shadow: 0 8px 28px color-mix(in srgb, $secondary, transparent 80%);
+
+
+
+    &:hover {
+      color: $primary;
+      background: color-mix(in srgb, $secondary, transparent 15%);
+      box-shadow: 0 8px 28px color-mix(in srgb, $secondary, transparent 55%);
+    }
+
+
+
+
+  }
+
+
+
+
+}
+
+
+
+
   
   
   

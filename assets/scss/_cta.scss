@@ -5,6 +5,8 @@
     background: $secondary;
     background-size: cover;
     padding: 60px 0;
+    
+
   
     h3 {
       color: #fff;
@@ -23,11 +25,14 @@
       letter-spacing: 1px;
       display: inline-block;
       padding: 10px 35px;
+      
       background: $primary;
       border-radius: 25px;
       transition: 0.5s;
       margin-top: 10px;
       border: 2px solid $primary;
+
+
       color: #fff;
       &:hover {
         background: lighten($color: $secondary, $amount: 30%);

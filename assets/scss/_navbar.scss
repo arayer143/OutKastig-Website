@@ -36,7 +36,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 3px;
-      font-family: var(--font-primary);
+      font-family: $font-primary;
       font-size: 14px;
       font-weight: 500;
       color: rgba(255, 255, 255, 0.6);
@@ -49,6 +49,7 @@
     .navbar a i,
     .navbar a:focus i {
       font-size: 12px;
+
       line-height: 0;
       margin-left: 5px;
     }
