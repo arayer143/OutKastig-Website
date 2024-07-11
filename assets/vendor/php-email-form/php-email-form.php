@@ -1,7 +1,7 @@
 <?php
 /**
  * PHP Email Form
- * Version: 3.7
+ * Version: 3.8
  * Website: https://bootstrapmade.com/php-email-form/
  * Copyright: BootstrapMade.com
  */
@@ -14,8 +14,10 @@ class PHP_Email_Form {
 
   public $to = false;
   public $from_name = false;
-  public $subject = false;
+  public $from_email = false;
   public $phone = false;
+  public $service = false;
+  public $subject = false;
   public $mailer = false;
   public $smtp = false;
   public $message = '';
@@ -31,7 +33,14 @@ class PHP_Email_Form {
   public $recaptcha_secret_key = false;
 
   public $error_msg = array(
-
+    'invalid_to_email' => 'Email to (receiving email address) is empty or invalid!',
+    'invalid_from_name' => 'From Name is empty!',
+    'invalid_from_email' => 'Email from: is empty or invalid!',
+    'invalid_subject' => 'Subject is too short or empty!',
+    'short' => 'is too short or empty!',
+    'ajax_error' => 'Sorry, the request should be an Ajax POST',
+    'invalid_attachment_extension' => 'File extension not allowed, please choose:',
+    'invalid_attachment_size' => 'Max allowed attachment size is:'
   );
 
   private $error = false;
@@ -114,6 +123,7 @@ class PHP_Email_Form {
 
     $to = filter_var( $this->to, FILTER_VALIDATE_EMAIL);
     $from_name = $this->from_name;
+    $from_email = filter_var( $this->from_email, FILTER_VALIDATE_EMAIL);
     $subject = $this->subject;
     $message = nl2br($this->message);
 
@@ -123,6 +133,8 @@ class PHP_Email_Form {
     if( ! $from_name ) 
       $this->error .= $this->error_msg['invalid_from_name'] . '<br>';
 
+    if( ! $from_email ) 
+      $this->error .= $this->error_msg['invalid_from_email'] . '<br>';
 
     if( ! $subject ) 
       $this->error .= $this->error_msg['invalid_subject'] . '<br>';
@@ -131,10 +143,10 @@ class PHP_Email_Form {
       if( !isset( $this->smtp['host'] ) )
         $this->error .= 'SMTP host is empty!' . '<br>';
 
-      if( !isset( $this->smtp['username'] ) ) {
+      if( !isset( $this->smtp['username'] ) && ( $this->smtp['auth'] ?? true) ) {
         $this->error .= 'SMTP username is empty!' . '<br>';
       }
-      if( !isset( $this->smtp['password'] ) )
+      if( !isset( $this->smtp['password'] ) && ( $this->smtp['auth'] ?? true) )
         $this->error .= 'SMTP password is empty!' . '<br>';
     
       if( !isset( $this->smtp['port'] ) )
@@ -178,7 +190,7 @@ class PHP_Email_Form {
       // Recipients
       $mail->setFrom( $this->mailer, $from_name );
       $mail->addAddress( $to );
-
+      $mail->addReplyTo( $from_email, $from_name );
 
       // cc
       if(count($this->cc) > 0) {
@@ -239,7 +251,7 @@ class PHP_Email_Form {
  * @copyright 2012 - 2020 Marcus Bointon
  * @copyright 2010 - 2012 Jim Jagielski
  * @copyright 2004 - 2009 Andy Prevost
- * @license   http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
+ * @license   https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html GNU Lesser General Public License
  * @note      This program is distributed in the hope that it will be useful - WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
  * FITNESS FOR A PARTICULAR PURPOSE.
@@ -368,8 +380,7 @@ class PHPMailer
      * Only supported in simple alt or alt_inline message types
      * To generate iCal event structures, use classes like EasyPeasyICS or iCalcreator.
      *
-     * @see http://sprain.ch/blog/downloads/php-class-easypeasyics-create-ical-files-with-php/
-     * @see http://kigkonsult.se/iCalcreator/
+     * @see https://kigkonsult.se/iCalcreator/
      *
      * @var string
      */
@@ -684,7 +695,7 @@ class PHPMailer
      * Only applicable when sending via SMTP.
      *
      * @see https://en.wikipedia.org/wiki/Variable_envelope_return_path
-     * @see http://www.postfix.org/VERP_README.html Postfix VERP info
+     * @see https://www.postfix.org/VERP_README.html Postfix VERP info
      *
      * @var bool
      */
@@ -767,10 +778,10 @@ class PHPMailer
      * The function that handles the result of the send email action.
      * It is called out by send() for each email sent.
      *
-     * Value can be any php callable: http://www.php.net/is_callable
+     * Value can be any php callable: https://www.php.net/is_callable
      *
      * Parameters:
-     *   bool $result        result of the send action
+     *   bool $result           result of the send action
      *   array   $to            email addresses of the recipients
      *   array   $cc            cc email addresses
      *   array   $bcc           bcc email addresses
@@ -1117,7 +1128,7 @@ class PHPMailer
         if ($this->SMTPDebug <= 0) {
             return;
         }
-     
+   
         //Avoid clash with built-in function names
         if (is_callable($this->Debugoutput) && !in_array($this->Debugoutput, ['error_log', 'html', 'echo'])) {
             call_user_func($this->Debugoutput, $str, $this->SMTPDebug);
@@ -1423,7 +1434,7 @@ class PHPMailer
      * Uses the imap_rfc822_parse_adrlist function if the IMAP extension is available.
      * Note that quotes in the name part are removed.
      *
-     * @see http://www.andrew.cmu.edu/user/agreen1/testing/mrbs/web/Mail/RFC822.php A more careful implementation
+     * @see https://www.andrew.cmu.edu/user/agreen1/testing/mrbs/web/Mail/RFC822.php A more careful implementation
      *
      * @param string $addrstr The address list string
      * @param bool   $useimap Whether to use the IMAP extension to parse the list
@@ -1618,7 +1629,6 @@ class PHPMailer
                  *  * IPv6 literals: 'first.last@[IPv6:a1::]'
                  * Not all of these will necessarily work for sending!
                  *
-                 * @see       http://squiloople.com/2009/12/20/email-address-validation/
                  * @copyright 2009-2010 Michael Rushton
                  * Feel free to use and redistribute this code. But please keep this copyright notice.
                  */
@@ -1945,9 +1955,8 @@ class PHPMailer
         //This sets the SMTP envelope sender which gets turned into a return-path header by the receiver
         //A space after `-f` is optional, but there is a long history of its presence
         //causing problems, so we don't use one
-        //Exim docs: http://www.exim.org/exim-html-current/doc/html/spec_html/ch-the_exim_command_line.html
-        //Sendmail docs: http://www.sendmail.org/~ca/email/man/sendmail.html
-        //Qmail docs: http://www.qmail.org/man/man8/qmail-inject.html
+        //Exim docs: https://www.exim.org/exim-html-current/doc/html/spec_html/ch-the_exim_command_line.html
+        //Sendmail docs: https://www.sendmail.org/~ca/email/man/sendmail.html
         //Example problem: https://www.drupal.org/node/1057954
 
         //PHP 5.6 workaround
@@ -2112,7 +2121,7 @@ class PHPMailer
     /**
      * Send mail using the PHP mail() function.
      *
-     * @see http://www.php.net/manual/en/book.mail.php
+     * @see https://www.php.net/manual/en/book.mail.php
      *
      * @param string $header The message headers
      * @param string $body   The message body
@@ -2142,9 +2151,8 @@ class PHPMailer
         //This sets the SMTP envelope sender which gets turned into a return-path header by the receiver
         //A space after `-f` is optional, but there is a long history of its presence
         //causing problems, so we don't use one
-        //Exim docs: http://www.exim.org/exim-html-current/doc/html/spec_html/ch-the_exim_command_line.html
-        //Sendmail docs: http://www.sendmail.org/~ca/email/man/sendmail.html
-        //Qmail docs: http://www.qmail.org/man/man8/qmail-inject.html
+        //Exim docs: https://www.exim.org/exim-html-current/doc/html/spec_html/ch-the_exim_command_line.html
+        //Sendmail docs: https://www.sendmail.org/~ca/email/man/sendmail.html
         //Example problem: https://www.drupal.org/node/1057954
         //CVE-2016-10033, CVE-2016-10045: Don't pass -f if characters will be escaped.
 
@@ -3845,7 +3853,7 @@ class PHPMailer
      * without breaking lines within a character.
      * Adapted from a function by paravoid.
      *
-     * @see http://www.php.net/manual/en/function.mb-encode-mimeheader.php#60283
+     * @see https://www.php.net/manual/en/function.mb-encode-mimeheader.php#60283
      *
      * @param string $str       multi-byte text to wrap encode
      * @param string $linebreak string to use as linefeed/end-of-line
@@ -3901,7 +3909,7 @@ class PHPMailer
     /**
      * Encode a string using Q encoding.
      *
-     * @see http://tools.ietf.org/html/rfc2047#section-4.2
+     * @see https://www.rfc-editor.org/rfc/rfc2047#section-4.2
      *
      * @param string $str      the text to encode
      * @param string $position Where the text is going to be used, see the RFC for what that means
@@ -4478,8 +4486,8 @@ class PHPMailer
             //Is it a valid IPv4 address?
             return filter_var($host, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4) !== false;
         }
-        //Is it a syntactically valid hostname (when embeded in a URL)?
-        return filter_var('http://' . $host, FILTER_VALIDATE_URL) !== false;
+        //Is it a syntactically valid hostname (when embedded in a URL)?
+        return filter_var('https://' . $host, FILTER_VALIDATE_URL) !== false;
     }
 
     /**
@@ -4890,7 +4898,7 @@ class PHPMailer
      * Multi-byte-safe pathinfo replacement.
      * Drop-in replacement for pathinfo(), but multibyte- and cross-platform-safe.
      *
-     * @see http://www.php.net/manual/en/function.pathinfo.php#107461
+     * @see https://www.php.net/manual/en/function.pathinfo.php#107461
      *
      * @param string     $path    A filename or path, does not need to exist as a file
      * @param int|string $options Either a PATHINFO_* constant,
@@ -5453,7 +5461,13 @@ class PHPMailer
         return $this->oauth;
     }
 
-
+    /**
+     * Set an OAuthTokenProvider instance.
+     */
+    public function setOAuth(OAuthTokenProvider $oauth)
+    {
+        $this->oauth = $oauth;
+    }
 }
 
 /**
@@ -5469,7 +5483,7 @@ class PHPMailer
  * @copyright 2012 - 2020 Marcus Bointon
  * @copyright 2010 - 2012 Jim Jagielski
  * @copyright 2004 - 2009 Andy Prevost
- * @license   http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
+ * @license   https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html GNU Lesser General Public License
  * @note      This program is distributed in the hope that it will be useful - WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
  * FITNESS FOR A PARTICULAR PURPOSE.
@@ -5599,8 +5613,8 @@ class SMTP
     /**
      * Whether to use VERP.
      *
-     * @see http://en.wikipedia.org/wiki/Variable_envelope_return_path
-     * @see http://www.postfix.org/VERP_README.html Info on VERP
+     * @see https://en.wikipedia.org/wiki/Variable_envelope_return_path
+     * @see https://www.postfix.org/VERP_README.html Info on VERP
      *
      * @var bool
      */
@@ -5611,7 +5625,7 @@ class SMTP
      * Default of 5 minutes (300sec) is from RFC2821 section 4.5.3.2.
      * This needs to be quite high to function correctly with hosts using greetdelay as an anti-spam measure.
      *
-     * @see http://tools.ietf.org/html/rfc2821#section-4.5.3.2
+     * @see https://www.rfc-editor.org/rfc/rfc2821#section-4.5.3.2
      *
      * @var int
      */
@@ -5725,7 +5739,13 @@ class SMTP
         if ($level > $this->do_debug) {
             return;
         }
-   
+        //Is this a PSR-3 logger?
+        if ($this->Debugoutput instanceof \Psr\Log\LoggerInterface) {
+            //Remove trailing line breaks potentially added by calls to SMTP::client_send()
+            $this->Debugoutput->debug(rtrim($str, "\r\n"));
+
+            return;
+        }
         //Avoid clash with built-in function names
         if (is_callable($this->Debugoutput) && !in_array($this->Debugoutput, ['error_log', 'html', 'echo'])) {
             call_user_func($this->Debugoutput, $str, $level);
@@ -5735,6 +5755,7 @@ class SMTP
         switch ($this->Debugoutput) {
             case 'error_log':
                 //Don't output, just log
+                /** @noinspection ForgottenDebugOutputInspection */
                 error_log($str);
                 break;
             case 'html':
@@ -6090,7 +6111,7 @@ class SMTP
         }
 
         //The following borrowed from
-        //http://php.net/manual/en/function.mhash.php#27225
+        //https://www.php.net/manual/en/function.mhash.php#27225
 
         //RFC 2104 HMAC implementation for php.
         //Creates an md5 HMAC.
