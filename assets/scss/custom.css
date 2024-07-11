@@ -258,51 +258,9 @@
   }
 }
 /*** About Start ***/
-.about-img {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.about .about-img .about-img-inner {
-  position: absolute;
-  left: 1rem;
-  bottom: 0;
-  border: 10px solid;
-  border-color: var(--bs-white) var(--bs-white) var(--bs-white) var(--bs-white);
-  border-radius: 50%;
-  color: #000;
-  top: 7rem;
-}
-
-.about .about-img .about-experience {
-  position: absolute;
-  top: 124px;
-  left: -125px;
-  transform: rotate(-90deg);
-  background: transparent;
-  color: black;
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: 4px;
-}
-
-.about .about-page-img img {
-  float: left;
-  max-width: 200px;
-  margin-bottom: 2rem;
-  margin-right: 4rem;
-  border-radius: 2rem;
-}
-
-/*** About End ***/
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
 .about h6 {
   font-size: 28px;
   font-weight: 400;
-  font-family: var("Poppins", sans-serif);
   margin: 30px 0;
 }
 
@@ -312,66 +270,48 @@
     margin: 0 0 80px 0;
   }
 }
-.about .our-story {
-  padding: 40px;
-  background-color: #f5f6f7;
+.about-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
-@media (min-width: 991px) {
-  .about .our-story {
-    padding-right: 35%;
-  }
-}
-.about .our-story h4 {
-  text-transform: uppercase;
-  font-size: 18px;
-  color: #838893;
-}
-
-.about .our-story h3 {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: var(#000035);
+.about .about-img .about-img-inner {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 0;
+  border: 10px solid;
+  border-color: white;
+  border-radius: 50%;
+  color: #000;
+  top: 7rem;
 }
 
-.about .our-story p:last-child {
-  margin-bottom: 0;
+.about-buttons {
+  display: inline-flex;
 }
-
-.about ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.about ul li {
-  padding: 5px 0;
-  display: flex;
+.about-buttons .social-links a {
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  background: #000035;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, rgb(90, 90, 90), transparent 50%);
+  font-size: 16px;
+  color: color-mix(in srgb, rgb(90, 90, 90), transparent 30%);
+  margin-right: 10px;
+  transition: 0.3s;
 }
-
-.about ul i {
+.about-buttons .social-links a :hover {
   font-size: 20px;
-  margin-right: 4px;
-  color: var(rgb(90, 90, 90));
 }
-
-.about .watch-video i {
-  font-size: 32px;
-  transition: 0.3s;
-  color: var(rgb(90, 90, 90));
+.about-buttons .social-links a i {
+  color: white;
 }
-
-.about .watch-video a {
-  font-weight: 600;
-  color: var(#000035);
-  margin-left: 8px;
-  transition: 0.3s;
-}
-
-.about .watch-video:hover a {
-  color: var(rgb(90, 90, 90));
+.about-buttons .social-links a i:hover {
+  color: rgb(90, 90, 90);
 }
 
 /*--------------------------------------------------------------
@@ -388,7 +328,7 @@
 
 .hero .carousel {
   width: 100%;
-  min-height: 100vh;
+  min-height: 70vh;
   padding: 80px 0;
   margin: 0;
   position: relative;
@@ -657,6 +597,72 @@ h6 {
     transition-delay: 0 !important;
   }
 }
+/*--------------------------------------------------------------
+# Alt Services Section
+--------------------------------------------------------------*/
+.alt-services .img-bg {
+  background-size: cover;
+  background-position: center center;
+  min-height: 400px;
+}
+.alt-services h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.alt-services h3:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--color-primary);
+  left: 0;
+  bottom: 0;
+}
+.alt-services .icon-box {
+  margin-top: 50px;
+}
+.alt-services .icon-box i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  margin-right: 25px;
+  font-size: 28px;
+  width: 56px;
+  height: 56px;
+  border-radius: 4px;
+  line-height: 0;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  transition: 0.3s;
+}
+.alt-services .icon-box:hover i {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+.alt-services .icon-box h4 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.alt-services .icon-box h4 a {
+  color: #000;
+  transition: 0.3s;
+}
+.alt-services .icon-box h4 a:hover {
+  color: var(--color-primary);
+}
+.alt-services .icon-box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
 /*--------------------------------------------------------------
  # Features Section
  --------------------------------------------------------------*/
@@ -1289,6 +1295,9 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact {
+  background-color: whitesmoke;
+}
 .contact .info-box {
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
   padding: 20px;
