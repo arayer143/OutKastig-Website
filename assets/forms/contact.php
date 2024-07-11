@@ -15,6 +15,7 @@
   
   $contact->to = $receiving_email_address;
   $contact->from_name = $_POST['name'];
+  $contact->from_email = $_POST['email'];
   $contact->phone = $_POST['phone'];
   $contact->subject = $_POST['subject'];
   $contact->service = $_POST['service'];
