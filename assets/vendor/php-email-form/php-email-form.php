@@ -16,8 +16,6 @@ class PHP_Email_Form {
   public $from_name = false;
   public $subject = false;
   public $phone = false;
-  public $email =false;
-  public $service = false;
   public $mailer = false;
   public $smtp = false;
   public $message = '';
