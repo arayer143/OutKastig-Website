@@ -33,7 +33,7 @@
   $contact->add_message( $_POST['name'], 'From');
   $contact->add_message( $_POST['phone'], 'Phone');
   $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['subject'], 'Message');
+  $contact->add_message( $_POST['subject'], 'Company Name');
   $contact->add_message( $_POST['service'], 'Service Requested');
   $contact->add_message( $_POST['message'], 'Message');
 
