@@ -17,7 +17,7 @@
   $contact->from_name = $_POST['name'];
   $contact->from_email = $_POST['email'];
   $contact->phone = $_POST['phone'];
-  $contact->subject = $_POST['New Message from Outkastindustrial.com'];
+  $contact->subject = $_POST['subject'];
   $contact->service = $_POST['service'];
 
   // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
