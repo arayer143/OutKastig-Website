@@ -39,25 +39,37 @@
   <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
     <a href="index.html" class="logo d-flex align-items-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1>Outkast Industrial Group<span>.</span></h1>
+
+      <h1> <img src="assets\img\outkast-logo.webp" alt="OutKast Logo" style="border-radius: 3rem; margin-right: 10px; margin-bottom: 5px; " width="30" height="30">OutKast Industrial Group  </h1>
     </a>
 
     <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
     <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a href="index.html" >Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-      
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <ul>
+            <li><a href="services.html">All Services</a></li>
+     
+            <li><a href="storage-tank-cleaning.html">Storage Tank Cleaning</a></li>
+            <li><a href="pipeline-system-cleaning.html">Pipeline System Cleaning</a></li>
+            <li><a href="vaccum-truck-services.html">Vaccum Truck Services</a></li>
+            <li><a href="chemical-cleaning.html">Chemical Cleaning</a></li>
+            <li><a href="hazardous-material-cleaning.html">Hazardous Material Cleaning</a></li>
+            <li><a href="confined-space-rescue.html">Confined Space Rescue</a></li>
+
+
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav><!-- .navbar -->
 
   </div>
 </header><!-- End Header -->
+
 
   <main id="main">
 
@@ -153,7 +165,7 @@
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6 footer-about">
             <a href="index.html" class="logo d-flex align-items-center">
-             <img src="assets/img/Raydunn-logo-noBG.png" alt="">
+             <img src="assets/img/outkast-logo.webp" alt="">
             </a>
             <div class="footer-contact pt-3">
            
@@ -173,8 +185,7 @@
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About us</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="services.html">All Services</a></li>
               <li><a href="contact.html">Contact</a></li>
           
             </ul>
@@ -183,24 +194,16 @@
           <div class="col-lg-2 col-md-3 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><a href="web-design.html">Tank Cleaning</a></li>
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">Product Management</a></li>
-              <li><a href="#">Marketing</a></li>
-              <li><a href="#">Graphic Design</a></li>
+              <li><a href="storage-tank-cleaning.html">Storage Tank Cleaning</a></li>
+              <li><a href="pipeline-system-cleaning.html">Pipeline System Cleaning</a></li>
+              <li><a href="vaccum-truck-services.html">Vaccum Truck Services</a></li>
+              <li><a href="chemical-cleaning.html">Chemical Cleaning</a></li>
+              <li><a href="hazardous-material-cleaning.html">Hazardous Material Cleaning</a></li>
+              <li><a href="confined-space-rescue.html">Confined Space Rescue</a></li>
             </ul>
           </div>
   
-          <div class="col-lg-4 col-md-12 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-            </form>
-          </div>
+    
   
         </div>
       </div>
@@ -210,10 +213,11 @@
       </div>
   
     </footer>
+  
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <div id="preloader"></div>
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

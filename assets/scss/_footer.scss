@@ -8,19 +8,33 @@
   font-size: 14px;
   padding-bottom: 1px;
   position: relative;
+  align-items: center;
+
+
+
+
 
   .footer-top {
     padding-top: 50px;
-  }
+
+
+
 
   .footer-about {
     .logo {
       line-height: 1;
       margin-bottom: 25px;
+      
 
       img {
-        max-height: 40px;
+        max-height: 150px;
         margin-right: 6px;
+
+        @media (max-width:580px){
+          text-align: center;
+         }
+      }
+      
       }
 
       span {
@@ -33,7 +47,8 @@
     }
 
     p {
-      font-size: 14px;
+      font-size: 19px;
+      color: black;
   
     }
   }
@@ -70,6 +85,7 @@
   h4 {
     font-size: 16px;
     font-weight: bold;
+    text-decoration: underline 2px;
     position: relative;
     padding-bottom: 12px;
   }
@@ -100,7 +116,8 @@
       }
 
       a {
-        color: color-mix(in srgb, $primary, transparent 30%);
+        color:black;
+        font-weight: 500;
         display: inline-block;
         line-height: 1;
 
@@ -111,106 +128,7 @@
     }
   }
 
-  .footer-contact {
-    p {
-      margin-bottom: 5px;
-    }
-  }
 
-  .footer-newsletter {
-    .newsletter-form {
-      margin-top: 30px;
-      padding: 6px 8px;
-      position: relative;
-      border-radius: 50px;
-      border: 1px solid color-mix(in srgb, $secondary, transparent 70%);
-      display: flex;
-      background-color: var(--contrast-color);      transition: 0.3s;
-
-      &:focus-within {
-        border-color: $secondary;
-      }
-
-      input[type="email"] {
-        border: 0;
-        padding: 4px 10px;
-        width: 100%;
-        background-color: var(--contrsast-color);
-        color: $primary;
-      }
-
-      input[type="email"]:focus-visible {
-        outline: none;
-      }
-
-      input[type="submit"] {
-        border: 0;
-        font-size: 16px;
-        padding: 0 20px;
-        margin: -7px -9px -7px 0;
-        background: $secondary;
-        color: var(--contrast-color);
-        transition: 0.3s;
-        border-radius: 50px;
-
-        &:hover {
-          background: color-mix(in srgb, $secondary, transparent 20%);
-        }
-      }
-    }
-
-    .error-message {
-      display: none;
-      background: #df1529;
-      color: #ffffff;
-      text-align: left;
-      padding: 15px;
-      margin-top: 10px;
-      font-weight: 600;
-      border-radius: 4px;
-    }
-
-    .sent-message {
-      display: none;
-      color: #ffffff;
-      background: #059652;
-      text-align: center;
-      padding: 15px;
-      margin-top: 10px;
-      font-weight: 600;
-      border-radius: 4px;
-    }
-
-    .loading {
-      display: none;
-      background: $secondary;
-      text-align: center;
-      padding: 15px;
-      margin-top: 10px;
-
-      &:before {
-        content: "";
-        display: inline-block;
-        border-radius: 50%;
-        width: 24px;
-        height: 24px;
-        margin: 0 10px -6px 0;
-        border: 3px solid $secondary;
-        border-top-color: $secondary;
-        animation: subscription-loading 1s linear infinite;
-      }
-    }
-
-    @keyframes subscription-loading {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-  }
 
   .copyright {
     padding-top: 25px;
@@ -219,10 +137,11 @@
 
     p {
       margin-bottom: 0;
+      color: black;
     }
 
     a{
-      color: $primary;
+      color: $secondary;
     }
   }
 
