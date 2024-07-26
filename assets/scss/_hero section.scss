@@ -41,6 +41,7 @@
   .hero .info {
     position: absolute;
     inset: 0;
+    margin-bottom: 6rem;
     z-index: 2;
   }
   
@@ -52,8 +53,7 @@
   
   .hero .info h2 {
     color: #fff;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
+    margin-bottom: 3rem;
     font-size: 56px;
     font-weight: 700;
     position: relative;
@@ -135,6 +135,12 @@
       padding-left: 15px;
     }
   }
+
+  @media (max-width: 540px) {
+    .hero .carousel-control-prev {
+      padding-left: 25px;
+    }
+  }
   
   .hero .carousel-control-next {
     justify-content: end;
@@ -145,17 +151,23 @@
       padding-right: 15px;
     }
   }
+  @media (max-width: 540px) {
+    .hero .carousel-control-next {
+      padding-right: 25px;
+    }
+  }
   
   .hero .carousel-control-next-icon,
   .hero .carousel-control-prev-icon {
     background: none;
-    font-size: 26px;
+    font-size: 16px;
     line-height: 0;
     background: rgba(255, 255, 255, 0.2);
     color: rgba(255, 255, 255, 0.6);
     border-radius: 50px;
-    width: 54px;
-    height: 54px;
+    
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
