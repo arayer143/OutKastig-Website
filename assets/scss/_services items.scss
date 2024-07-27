@@ -1,6 +1,14 @@
 /*--------------------------------------------------------------
   # Services Section
   --------------------------------------------------------------*/
+
+
+  .services a{
+    color: black;
+    text-align: center;
+    font-size: 19px;
+  }
+
   .services .service-item {
     padding: 40px;
     background: #fff;
@@ -54,7 +62,7 @@
   
   .services .service-item p {
     line-height: 24px;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 0;
   }
   
