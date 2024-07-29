@@ -257,35 +257,75 @@
     z-index: 9996;
   }
 }
-/*** About Start ***/
-.about h6 {
-  font-size: 28px;
-  font-weight: 400;
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.about h2 {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
   margin: 30px 0;
 }
-
-.about-img {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
+@media (min-width: 991px) {
+  .about h2 {
+    max-width: 65%;
+    margin: 0 0 80px 0;
+  }
 }
-
-.about .about-img .about-img-inner {
-  position: absolute;
-  left: 1.5rem;
-  height: auto;
-  bottom: 0;
-  border: 10px solid;
-  border-color: white;
-  border-radius: 50%;
-  color: #000;
-  top: 7rem;
+.about .our-story {
+  padding: 40px;
+  background-color: #d4d4d4;
 }
-
-.about-buttons {
+@media (min-width: 991px) {
+  .about .our-story {
+    padding-right: 35%;
+  }
+}
+.about .our-story h4 {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #000035;
+}
+.about .our-story h3 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000035;
+}
+.about .our-story p:last-child {
+  margin-bottom: 0;
+}
+.about ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+.about ul li {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+.about ul i {
+  font-size: 20px;
+  margin-right: 4px;
+  color: rgb(90, 90, 90);
+}
+.about .about-img {
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 992px) {
+  .about .about-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+.about .about-buttons {
   display: inline-flex;
 }
-.about-buttons .social-links a {
+.about .about-buttons .social-links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -299,13 +339,13 @@
   margin-right: 10px;
   transition: 0.3s;
 }
-.about-buttons .social-links a :hover {
+.about .about-buttons .social-links a :hover {
   font-size: 20px;
 }
-.about-buttons .social-links a i {
+.about .about-buttons .social-links a i {
   color: white;
 }
-.about-buttons .social-links a i:hover {
+.about .about-buttons .social-links a i:hover {
   color: rgb(90, 90, 90);
 }
 

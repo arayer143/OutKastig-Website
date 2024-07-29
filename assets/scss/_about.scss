@@ -1,48 +1,81 @@
-/*** About Start ***/
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.about {
 
-
-
-
-
-.about h6 {
-  font-size: 28px;
-  font-weight: 400;
-
-  margin: 30px 0;
-}
-
-
-
-
-
-
-
-.about-img {
-    position: relative;
-    overflow: hidden;
-   
-  
-    border-radius: 10px;
+  h2 {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin: 30px 0;
+    @media (min-width: 991px) {
+      max-width: 65%;
+      margin: 0 0 80px 0;
+    }
   }
-  
-  .about .about-img .about-img-inner {
-    position: absolute;
-    left: 1.5rem; 
-    height: auto;
-    bottom: 0; 
-    border: 10px solid; 
-    border-color: white;
-    border-radius: 50%;
-    color: #000;
-    top: 7rem;
-  
-  }
-  
- 
-  
 
-  
- 
+  .our-story {
+    padding: 40px;
+    background-color: lighten($primary, 48);
+
+    @media (min-width: 991px) {
+      padding-right: 35%;
+    }
+
+    h4 {
+      text-transform: uppercase;
+      font-size: 18px;
+      color: $secondary;
+    }
+
+    h3 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: $secondary;
+    }
+
+    p {
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
+    li {
+      padding: 5px 0;
+      display: flex;
+      align-items: center;
+    }
+    i {
+      font-size: 20px;
+      margin-right: 4px;
+      color: $primary;
+    }
+  } 
+
+    
+
+  .about-img {
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+    @media (min-width: 992px) {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+
+
+
+
   .about-buttons{
 
     display: inline-flex;
@@ -76,10 +109,6 @@
       }
     }
   }
-  
 
-  
+  }
 }
-  
-  
-  
