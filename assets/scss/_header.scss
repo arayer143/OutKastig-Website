@@ -23,7 +23,11 @@
     margin-bottom: 0;
 
     @media (max-width: 380px){
-      font-size: 17px;
+      font-size: 15px;
+    }
+
+    @media (max-width: 280px){
+      font-size: 10px;
     }
  
   }

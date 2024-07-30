@@ -10,6 +10,7 @@
   
   .hero .info h2 .title{
     font-size: 30px;
+
   }
   
   .hero .carousel {
@@ -54,27 +55,33 @@
   .hero .info h2 {
     color: #fff;
     margin-bottom: 3rem;
-    font-size: 56px;
+    font-size: 46px;
     font-weight: 700;
     position: relative;
+
+
+  
   }
+
+
   
   .hero .info h2:after {
     content: "";
     position: absolute;
     display: block;
-    width: 80px;
+    width: 90px;
     height: 4px;
-    background: var($primary);
+    background: lighten($primary, 20);
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 4;
+    top: 1;
     margin: auto;
   }
   
   @media (max-width: 768px) {
     .hero .info h2 {
-      font-size: 36px;
+      font-size: 28px;
     }
   }
   
@@ -84,7 +91,6 @@
   }
   
   .hero .info .btn-get-started {
-    font-family: $font-primary;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 1px;
@@ -95,11 +101,10 @@
     transition: 0.5s;
     margin: 10px;
     color: #fff;
-    border: 2px solid var($primary);
+    border: 2px solid $primary;
   }
   
   .btn-get-started{
-    font-family: $font-primary;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 1px;
@@ -110,7 +115,7 @@
     transition: 0.5s;
     margin: 10px;
     color: #fff;
-    border: 2px solid var($primary);
+    border: 2px solid $primary;
   }
   
   
