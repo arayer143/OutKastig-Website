@@ -464,7 +464,8 @@
 .hero .carousel-item {
   position: absolute;
   inset: 0;
-  background-size: cover;
+  background-size: contain;
+  width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -473,20 +474,12 @@
 }
 
 .hero .carousel-item .hero-carousel-img {
-  height: 90vh;
-  width: 100vw;
-  background: cover cover;
-  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
-@media (max-width: 500px) {
-  .hero .carousel-item .hero-carousel-img {
-    width: cover;
-  }
-}
 .hero .carousel-item::before {
   content: "";
-  background-color: rgba(26, 26, 26, 0.7);
   position: absolute;
   inset: 0;
 }
@@ -513,7 +506,7 @@
   background: #222428;
   transition: 0.5s;
   margin: 10px;
-  margin-top: 20rem;
+  margin-top: 15rem;
   color: #fff;
   border: 2px solid rgb(90, 90, 90);
 }
