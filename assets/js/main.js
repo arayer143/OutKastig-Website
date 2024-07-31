@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   function aos_init() {
     AOS.init({
-      duration: 400,
+      duration: 300,
       easing: 'slide',
       once: true,
       mirror: false
