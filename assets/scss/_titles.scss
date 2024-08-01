@@ -147,15 +147,12 @@
   
 #alternate-page-title {
 
-  background-size: cover;
-  overflow: hidden;
-  position: relative;
-  color: #fff;
-  padding: 90px 0 40px 0;
 
-  @media (min-width: 1024px) {
-    background-attachment: fixed;
-  }
+ 
+  color: #fff;
+  padding: 20px 0 40px 0;
+
+
 
   &:before {
     content: "";
@@ -165,6 +162,21 @@
     top: 0;
     left: 0;
     right: 0;
+  }
+
+
+
+
+  .text-box{
+    text-align: center;
+    padding: 3rem;
+    
+    max-width: 600px;
+
+    @media (max-width:1000px){
+      padding: 1rem;
+    
+    }
   }
 
   h2 {
@@ -187,36 +199,13 @@
     font-size: 14px;
     margin-bottom: 2px;
     color: #fff;
-    max-width: 370px;
+ 
     
   }
 
 
 
-  .btn {
-    color: $primary;
-    background: $secondary;
-    font-weight: 500;
-    font-size: 15px;
 
-    letter-spacing: 1px;
-    padding: 10px 28px;
-    border-radius: 50px;
-    transition: 0.5s;
-    box-shadow: 0 8px 28px color-mix(in srgb, $secondary, transparent 80%);
-
-
-
-    &:hover {
-      color: $primary;
-      background: color-mix(in srgb, $secondary, transparent 15%);
-      box-shadow: 0 8px 28px color-mix(in srgb, $secondary, transparent 55%);
-    }
-
-
-
-
-  }
 
 
 
