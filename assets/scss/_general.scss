@@ -2,8 +2,7 @@
   # General
   --------------------------------------------------------------*/
   body {
-    font-family: $font-default;
-    color: $default;
+    color: black;
     overflow-x: hidden;
   
   }
@@ -12,7 +11,7 @@
 
   
   a {
-    color: var($primary);
+    color: $primary;
     text-decoration: none;
   }
   

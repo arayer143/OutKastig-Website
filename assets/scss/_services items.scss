@@ -26,7 +26,7 @@
   }
   
   .services .service-item .icon i {
-    color: var($secondary);
+    color: $secondary;
     font-size: 30px;
     transition: ease-in-out 0.3s;
     z-index: 2;
@@ -69,7 +69,7 @@
   .services .service-item .readmore {
     margin-top: 15px;
     display: inline-block;
-    color: var($primary);
+    color: $primary;
   }
   
   .services .service-item:hover .icon:before {
