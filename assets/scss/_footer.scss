@@ -4,7 +4,7 @@
 --------------------------------------------------------------*/
 .footer {
   color: $primary;
-  background-color: lighten( #1d273a, 45%);
+  background-color:  lighten($primary, 10);
   font-size: 14px;
   padding-bottom: 1px;
   position: relative;
@@ -43,13 +43,13 @@
         font-weight: 700;
         letter-spacing: 1px;
     
-        color: black;
+        color: white;
       }
     }
 
     p {
       font-size: 19px;
-      color: black;
+      color: white;
   
     }
   }
@@ -85,10 +85,11 @@
 
   h4 {
     font-size: 16px;
-    color: $secondary;
+    color: white;
     padding: 2px;
     font-weight: bold;
     text-decoration: underline 2px;
+    text-underline-offset: 3px;
     position: relative;
     padding-bottom: 12px;
   }

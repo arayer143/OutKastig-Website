@@ -6,7 +6,7 @@
 #topbar {
   font-size: 14px;
   padding: 0;
-  background-color: #fff;
+  background-color: rgb(90, 90, 90);
   color: white;
   height: 40px;
 }
@@ -54,11 +54,12 @@
 .header .logo h1 {
   font-size: 28px;
   margin: 0;
+  color: White;
   line-height: 0;
   font-weight: 700;
 }
 .header .logo h1 a, .header .logo h1 a:hover {
-  color: #000068;
+  color: White;
   text-decoration: none;
 }
 .header .logo img {
@@ -112,6 +113,8 @@
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
   -webkit-text-decoration: underline 2px;
           text-decoration: underline 2px;
+  text-underline-offset: 4px;
+  color: white;
 }
 .navbar .getstarted, .navbar .getstarted:focus {
   background: rgb(90, 90, 90);
@@ -121,7 +124,6 @@
   color: #fff;
 }
 .navbar .getstarted:hover, .navbar .getstarted:focus:hover {
-  color: black;
   background: #676767;
 }
 .navbar .dropdown ul {
@@ -132,7 +134,7 @@
   margin: 0;
   padding: 10px 0;
   z-index: 3;
-  color: black;
+  color: white;
   opacity: 0;
   visibility: hidden;
   background: whitesmoke;
@@ -151,7 +153,9 @@
   font-size: 12px;
 }
 .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
-  color: rgb(90, 90, 90);
+  -webkit-text-decoration: underline 2px;
+          text-decoration: underline 2px;
+  text-underline-offset: 4px;
 }
 .navbar .dropdown:hover > ul {
   opacity: 1;
@@ -508,21 +512,7 @@
   background: #222428;
   transition: 0.5s;
   margin: 10px;
-  margin-top: 15rem;
-  color: #fff;
-  border: 2px solid rgb(90, 90, 90);
-}
-
-.btn-get-started {
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 40px;
-  border-radius: 50px;
-  background: #222428;
-  transition: 0.5s;
-  margin: 10px;
+  margin-top: 25rem;
   color: #fff;
   border: 2px solid rgb(90, 90, 90);
 }
@@ -1193,6 +1183,7 @@ section {
   padding: 140px 0 60px 0;
   min-height: 30vh;
   position: relative;
+  background-color: rgb(90, 90, 90);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1464,7 +1455,7 @@ section {
 --------------------------------------------------------------*/
 .footer {
   color: rgb(90, 90, 90);
-  background-color: #7e94bf;
+  background-color: #747474;
   font-size: 14px;
   padding-bottom: 1px;
   position: relative;
@@ -1491,11 +1482,11 @@ section {
   font-size: 26px;
   font-weight: 700;
   letter-spacing: 1px;
-  color: black;
+  color: white;
 }
 .footer .footer-top p {
   font-size: 19px;
-  color: black;
+  color: white;
 }
 .footer .social-links a {
   display: flex;
@@ -1522,11 +1513,12 @@ section {
 }
 .footer h4 {
   font-size: 16px;
-  color: #000035;
+  color: white;
   padding: 2px;
   font-weight: bold;
   -webkit-text-decoration: underline 2px;
           text-decoration: underline 2px;
+  text-underline-offset: 3px;
   position: relative;
   padding-bottom: 12px;
 }

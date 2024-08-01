@@ -73,25 +73,12 @@
     background: #222428;
     transition: 0.5s;
     margin: 10px;
-    margin-top: 15rem;
+    margin-top: 25rem;
     color: #fff;
     border: 2px solid $primary;
   }
   
-  .btn-get-started{
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 12px 40px;
-    border-radius: 50px;
-    background: #222428;
-    transition: 0.5s;
-    margin: 10px;
-    color: #fff;
-    border: 2px solid $primary;
-  }
-  
+
   
   .btn-get-started:hover {
     background-color: lighten($secondary, 30);

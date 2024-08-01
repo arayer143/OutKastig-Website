@@ -36,28 +36,68 @@
 <body>
 
  
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:Pristinecleansoftwashllc@gmail.com">Email us!</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><a href="tel:9852329914">Call us!</a></i>
+      </div>
+
+      <div class="cta d-none d-md-flex align-items-center">
+        <a href="#contact" class="scrollto">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+    <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
+      <div class="logo">
+        <a href="index.html"  aria-label="Home Page link to Pristine Clean Soft Wash Homepage"><img src="assets/img/outkast-logo.webp" alt="Pristine logo"  class="img-fluid"></a>
+      </div>
 
-        <h1> <img src="assets\img\outkast-logo.webp" alt="OutKast Logo" style="border-radius: 3rem; margin-right: 10px; margin-bottom: 5px; " width="30" height="30">OutKast Industrial Group, LLC</h1>
-      </a>
-
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html" >Home</a></li>
+          <li><a href="#hero">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="services.html" class="active">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="dropdown"><a class="nav-link scrollto active" href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto active" href="services.html">All Services</a></li>
+              <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="storage-tank-cleaning.html">Storage Tank Cleaning</a></li>
+                  <li><a href="pipeline-system-cleaning.html">Pipeline System Cleaning</a></li>
+                  <li><a href="vaccum-truck-services.html">Vaccum Truck Services</a></li>
+                  <li><a href="chemical-cleaning.html">Chemical Cleaning</a></li>
+                  <li><a href="hazardous-material-cleaning.html">Hazardous Material Cleaning</a></li>
+                  <li><a href="confined-space-rescue.html">Confined Space Rescue</a></li>
+    
+                </ul>
+              </li>
+       
+            </ul>
+          </li>
+    
+
+
+    <!--     <li><a href="blog.html">Blog</a></li>
+  --> 
+          <li><a class="nav-link scrollto" href="contact.html">Contact</a></li>
         </ul>
+
+
+
+
+
+        <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
+
+
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
@@ -148,22 +188,11 @@
 
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-
-            <a href="">
-            <div class="service-item position-relative">
-         
-              <h3>Chemical Cleaning</h3>
-              <p>Industrial chemical cleaning services provide effective and thorough cleaning solutions for various industrial equipment and systems. These services use specially formulated chemical agents to dissolve and remove stubborn contaminants, deposits, and residues that can impair performance and efficiency.</p>
-            
-            </div>
-          </a>
-
-          </div><!-- End Service Item -->
+      
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
 
-            <a href="">
+            <a href="confined-space-rescue.html">
             <div class="service-item position-relative">
          
               <h3>Confined Space Rescue</h3>
@@ -177,7 +206,7 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
 
-            <a href="">
+            <a href="chemical-cleaning.html">
             <div class="service-item position-relative">
          
               <h3>Chemical Cleaning and Decontamination</h3>
@@ -208,7 +237,7 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
 
-            <a href="">
+            <a href="hazardous-material-cleaning.html">
             <div class="service-item position-relative">
          
               <h3>Hazardous Material Emergency Response</h3>
