@@ -120,13 +120,14 @@
       }
 
       a {
-        color: $secondary;
+        color: white;
         font-weight: 500;
         display: inline-block;
         line-height: 1;
 
         &:hover {
           color: $secondary;
+          transform: scale(1.2);
         }
       }
     }

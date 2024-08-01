@@ -307,6 +307,10 @@
   margin-bottom: 20px;
   color: #000035;
 }
+.about .our-story p {
+  font-size: 18px;
+  color: black;
+}
 .about .our-story p:last-child {
   margin-bottom: 0;
 }
@@ -1544,13 +1548,14 @@ section {
   padding-top: 0;
 }
 .footer .footer-links ul a {
-  color: #000035;
+  color: white;
   font-weight: 500;
   display: inline-block;
   line-height: 1;
 }
 .footer .footer-links ul a:hover {
   color: #000035;
+  transform: scale(1.2);
 }
 .footer .copyright {
   padding-top: 25px;
