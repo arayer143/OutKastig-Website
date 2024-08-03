@@ -148,9 +148,9 @@
 #alternate-page-title {
 
 
- 
+ height: 100%;
   color: #fff;
-  padding: 20px 0 40px 0;
+  padding: 20px 0 70px 0;
 
 
 
@@ -170,14 +170,10 @@
   .text-box{
     text-align: center;
     padding: 3rem;
-    
     max-width: 600px;
 
-    @media (max-width:1000px){
-      padding: 1rem;
-    
-    }
-  }
+ 
+
 
   h2 {
     font-size: 36px;
@@ -197,12 +193,12 @@
 
   p {
     font-size: 14px;
-    margin-bottom: 2px;
+    margin-bottom: 20px;
     color: #fff;
  
     
   }
-
+}
 
 
 

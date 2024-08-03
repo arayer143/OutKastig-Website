@@ -455,7 +455,6 @@
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  overflow-x: hidden;
   padding: 0;
 }
 
@@ -974,8 +973,9 @@ section {
 # alternate-section-header
 --------------------------------------------------------------*/
 #alternate-page-title {
+  height: 100%;
   color: #fff;
-  padding: 20px 0 40px 0;
+  padding: 20px 0 70px 0;
 }
 #alternate-page-title:before {
   content: "";
@@ -991,25 +991,20 @@ section {
   padding: 3rem;
   max-width: 600px;
 }
-@media (max-width: 1000px) {
-  #alternate-page-title .text-box {
-    padding: 1rem;
-  }
-}
-#alternate-page-title h2 {
+#alternate-page-title .text-box h2 {
   font-size: 36px;
   font-weight: bold;
   color: #fff;
 }
-#alternate-page-title h3 {
+#alternate-page-title .text-box h3 {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
 }
-#alternate-page-title p {
+#alternate-page-title .text-box p {
   font-size: 14px;
-  margin-bottom: 2px;
+  margin-bottom: 20px;
   color: #fff;
 }
 
