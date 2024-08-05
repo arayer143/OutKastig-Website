@@ -960,13 +960,18 @@ section {
 # alternate-section-header
 --------------------------------------------------------------*/
 #alternate-page-title {
-  height: 100%;
+  height: 40vh;
   color: #fff;
-  padding: 20px 0 70px 0;
+  padding: 10px 0 20px 0;
+  background: rgba(13, 20, 41, 0.7);
+}
+@media (max-width: 800px) {
+  #alternate-page-title {
+    height: 40vh;
+  }
 }
 #alternate-page-title:before {
   content: "";
-  background: rgba(13, 20, 41, 0.7);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -976,7 +981,9 @@ section {
 #alternate-page-title .text-box {
   text-align: center;
   padding: 3rem;
-  max-width: 600px;
+  width: 100%;
+  display: inline;
+  max-width: 200px;
 }
 #alternate-page-title .text-box h2 {
   font-size: 36px;
