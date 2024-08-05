@@ -22,14 +22,12 @@
 #topbar .contact-info i a {
   line-height: 0;
   color: white;
-  transition: 0.3s;
 }
 #topbar .contact-info i a:hover {
   color: white;
 }
 #topbar .cta a {
   color: white;
-  background: #000035;
   padding: 10px 20px;
   display: inline-block;
   z-index: 999;
@@ -42,49 +40,48 @@
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-.header {
+#header {
   height: 70px;
   transition: all 0.9s;
-  background-color: #747474;
+  background: #555;
   box-shadow: none;
+  /**
+  * Desktop Navigation 
+  */
+  /**
+  * Mobile Navigation 
+  */
 }
-.header.header-fixed {
-  box-shadow: none;
+#header .fixed-top {
+  box-shadow: white;
+  z-index: 10;
 }
-.header .logo h1 {
+#header .logo h1 {
   font-size: 28px;
   margin: 0;
   color: White;
   line-height: 0;
   font-weight: 700;
+  z-index: 999;
 }
-.header .logo h1 a, .header .logo h1 a:hover {
+#header .logo h1 a, #header .logo h1 a:hover {
   color: White;
   text-decoration: none;
 }
-.header .logo img {
+#header .logo img {
   padding: 0;
   margin: 0;
   max-height: 60px;
   margin-left: 1rem;
   border-radius: 50%;
 }
-
-.scrolled-offset {
-  margin-top: 70px;
+#header .scrolled-offset {
+  background-color: white;
 }
-
-#main {
-  z-index: 3;
-}
-
-/**
-* Desktop Navigation 
-*/
-.navbar {
+#header .navbar {
   padding: 0;
 }
-.navbar ul {
+#header .navbar ul {
   margin: 0;
   padding: 0;
   z-index: 999;
@@ -92,10 +89,10 @@
   list-style: none;
   align-items: center;
 }
-.navbar li {
+#header .navbar li {
   position: relative;
 }
-.navbar a, .navbar a:focus {
+#header .navbar a, #header .navbar a:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -105,28 +102,28 @@
   white-space: nowrap;
   transition: 0.3s;
 }
-.navbar a i, .navbar a:focus i {
+#header .navbar a i, #header .navbar a:focus i {
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
 }
-.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+#header .navbar a:hover, #header .navbar .active, #header .navbar .active:focus, #header .navbar li:hover > a {
   -webkit-text-decoration: underline 2px;
           text-decoration: underline 2px;
   text-underline-offset: 4px;
   color: white;
 }
-.navbar .getstarted, .navbar .getstarted:focus {
+#header .navbar .getstarted, #header .navbar .getstarted:focus {
   background: rgb(90, 90, 90);
   padding: 8px 20px;
   margin-left: 30px;
   border-radius: 4px;
   color: #fff;
 }
-.navbar .getstarted:hover, .navbar .getstarted:focus:hover {
+#header .navbar .getstarted:hover, #header .navbar .getstarted:focus:hover {
   background: #676767;
 }
-.navbar .dropdown ul {
+#header .navbar .dropdown ul {
   display: block;
   position: absolute;
   left: 14px;
@@ -142,50 +139,46 @@
   transition: 0.3s;
   border-radius: 4px;
 }
-.navbar .dropdown ul li {
+#header .navbar .dropdown ul li {
   min-width: 200px;
 }
-.navbar .dropdown ul a {
+#header .navbar .dropdown ul a {
   padding: 10px 20px;
   color: black;
 }
-.navbar .dropdown ul a i {
+#header .navbar .dropdown ul a i {
   font-size: 12px;
 }
-.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+#header .navbar .dropdown ul a:hover, #header .navbar .dropdown ul .active:hover, #header .navbar .dropdown ul li:hover > a {
   -webkit-text-decoration: underline 2px;
           text-decoration: underline 2px;
   text-underline-offset: 4px;
 }
-.navbar .dropdown:hover > ul {
+#header .navbar .dropdown:hover > ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
 }
-.navbar .dropdown .dropdown ul {
+#header .navbar .dropdown .dropdown ul {
   top: 0;
   left: calc(100% - 30px);
   visibility: hidden;
 }
-.navbar .dropdown .dropdown:hover > ul {
+#header .navbar .dropdown .dropdown:hover > ul {
   opacity: 1;
   top: 0;
   left: 100%;
   visibility: visible;
 }
 @media (max-width: 1366px) {
-  .navbar .dropdown .dropdown ul {
+  #header .navbar .dropdown .dropdown ul {
     left: -90%;
   }
-  .navbar .dropdown .dropdown:hover > ul {
+  #header .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
-
-/**
-* Mobile Navigation 
-*/
-.mobile-nav-toggle {
+#header .mobile-nav-toggle {
   color: #000035;
   font-size: 28px;
   cursor: pointer;
@@ -193,19 +186,18 @@
   line-height: 0;
   transition: 0.5s;
 }
-.mobile-nav-toggle.bi-x {
+#header .mobile-nav-toggle.bi-x {
   color: #fff;
 }
-
 @media (max-width: 991px) {
-  .mobile-nav-toggle {
+  #header .mobile-nav-toggle {
     display: block;
   }
-  .navbar ul {
+  #header .navbar ul {
     display: none;
   }
 }
-.navbar-mobile {
+#header .navbar-mobile {
   position: fixed;
   overflow: hidden;
   top: 0;
@@ -216,12 +208,12 @@
   transition: 0.3s;
   z-index: 999;
 }
-.navbar-mobile .mobile-nav-toggle {
+#header .navbar-mobile .mobile-nav-toggle {
   position: absolute;
   top: 15px;
   right: 15px;
 }
-.navbar-mobile ul {
+#header .navbar-mobile ul {
   display: block;
   position: absolute;
   top: 55px;
@@ -234,18 +226,18 @@
   overflow-y: auto;
   transition: 0.3s;
 }
-.navbar-mobile a, .navbar-mobile a:focus {
+#header .navbar-mobile a, #header .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
   color: #000035;
 }
-.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+#header .navbar-mobile a:hover, #header .navbar-mobile .active, #header .navbar-mobile li:hover > a {
   color: rgb(90, 90, 90);
 }
-.navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
+#header .navbar-mobile .getstarted, #header .navbar-mobile .getstarted:focus {
   margin: 15px;
 }
-.navbar-mobile .dropdown ul {
+#header .navbar-mobile .dropdown ul {
   position: static;
   display: none;
   margin: 10px 20px;
@@ -256,19 +248,19 @@
   background: #fff;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
-.navbar-mobile .dropdown ul li {
+#header .navbar-mobile .dropdown ul li {
   min-width: 200px;
 }
-.navbar-mobile .dropdown ul a {
+#header .navbar-mobile .dropdown ul a {
   padding: 10px 20px;
 }
-.navbar-mobile .dropdown ul a i {
+#header .navbar-mobile .dropdown ul a i {
   font-size: 12px;
 }
-.navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
+#header .navbar-mobile .dropdown ul a:hover, #header .navbar-mobile .dropdown ul .active:hover, #header .navbar-mobile .dropdown ul li:hover > a {
   color: rgb(90, 90, 90);
 }
-.navbar-mobile .dropdown > .dropdown-active {
+#header .navbar-mobile .dropdown > .dropdown-active {
   display: block;
 }
 
@@ -624,7 +616,6 @@
  # General
  --------------------------------------------------------------*/
 body {
-  color: black;
   overflow-x: hidden;
 }
 
@@ -669,7 +660,6 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 17px;
-  transition: all 0.4s;
 }
 
 .scroll-top i {
@@ -765,9 +755,6 @@ h6 {
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
- # more Features Section
- --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
