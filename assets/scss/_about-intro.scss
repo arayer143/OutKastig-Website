@@ -1,0 +1,97 @@
+/*--------------------------------------------------------------
+# About Section on index.html
+--------------------------------------------------------------*/
+.about-intro {
+
+
+  
+  h2{
+    color: $primary;
+    font-weight: 700;
+  }
+
+  .social-links {
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $secondary;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid color-mix(in srgb, $primary, transparent 30%);
+      font-size: 16px;
+      color: color-mix(in srgb, $primary, transparent 20%);
+      margin-right: 10px;
+      margin-bottom: 3rem,;
+      transition: 0.3s;
+
+      :hover {
+        font-size: 20px;
+      }
+
+      i{
+        color:white;
+      }
+
+      i:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  
+    .content {
+      background: whitesmoke;
+      color:$secondary;
+      padding: 7rem 0;
+  
+      .img-overlap {
+        margin-top: -170px;
+        padding: 1rem;
+      }
+
+
+
+      .btn {
+
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding: 10px 35px;
+   
+        text-align: center;
+        background: $primary;
+        border-radius: 25px;
+        transition: 0.5s;
+        margin-top: 10px;
+        border: 2px solid $primary;
+  
+  
+        color: #fff;
+        &:hover {
+          background: $secondary;
+        }
+      }
+    }
+  
+    p {
+      color: $secondary;
+    }
+  
+    .content-title {
+        color: $secondary;
+      font-weight: 600;
+      text-align: left;
+      font-size: 30px;
+
+      @media (max-width:994px)  {
+        text-align: center;
+      }
+      
+  
+    
+    }
+
+  }
