@@ -347,136 +347,138 @@ h6 {
 .hero {
   padding: 0;
 }
-
-.hero .info h2 .title {
-  font-size: 30px;
-}
-
 .hero .carousel {
   width: 100%;
-  min-height: 70vh;
-  padding: 80px 0;
+  min-height: calc(100vh - 100px);
+  padding: 0;
   margin: 0;
+  background-color: rgb(90, 90, 90);
   position: relative;
 }
-
+.hero img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 90vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
 .hero .carousel-item {
   position: absolute;
   inset: 0;
-  background-size: contain;
-  width: 100vw;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
-  z-index: 1;
-  transition-duration: 0.4s;
 }
-
-.hero .carousel-item .hero-carousel-img {
-  height: 100%;
-  width: 100%;
-}
-
-.hero .carousel-item::before {
+.hero .carousel-item:before {
   content: "";
   position: absolute;
   inset: 0;
-}
-
-.hero .info {
-  position: absolute;
-  inset: 0;
-  margin-bottom: 6rem;
   z-index: 2;
 }
-
+.hero .carousel-container {
+  position: absolute;
+  inset: 90px 64px 64px 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 3;
+}
+.hero h2 {
+  margin-bottom: 20px;
+  font-size: 48px;
+  font-weight: 700;
+  animation: fadeInDown 1s both;
+}
 @media (max-width: 768px) {
-  .hero .info {
-    padding: 0 50px;
+  .hero h2 {
+    font-size: 30px;
   }
 }
-.hero .info .btn-get-started {
+.hero p {
+  animation: fadeInDown 1s both 0.2s;
+}
+@media (min-width: 1024px) {
+  .hero h2,
+  .hero p {
+    max-width: 60%;
+  }
+}
+.hero .btn-get-started {
+  color: #000035;
+  background: rgb(90, 90, 90);
+  font-family: var(--heading-font);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 12px 40px;
+  padding: 8px 32px;
   border-radius: 50px;
-  background: #222428;
   transition: 0.5s;
   margin: 10px;
-  margin-top: 25rem;
-  color: #fff;
-  border: 2px solid rgb(90, 90, 90);
+  animation: fadeInUp 1s both 0.4s;
 }
-
-.btn-get-started:hover {
-  background-color: #0000ce;
+.hero .btn-get-started:hover {
+  background: color-mix(in srgb, rgb(90, 90, 90), transparent 20%);
 }
-
-.hero .info .btn-get-started:hover {
-  background-color: #000035;
-}
-
-.hero .carousel-control-prev {
-  justify-content: start;
-}
-
-@media (min-width: 640px) {
-  .hero .carousel-control-prev {
-    padding-left: 15px;
-  }
-}
-@media (max-width: 540px) {
-  .hero .carousel-control-prev {
-    padding-left: 25px;
-  }
-}
+.hero .carousel-control-prev,
 .hero .carousel-control-next {
-  justify-content: end;
+  width: 10%;
+  transition: 0.3s;
+  opacity: 0.5;
+  margin-top: 25rem;
 }
-
-@media (min-width: 640px) {
-  .hero .carousel-control-next {
-    padding-right: 15px;
-  }
+.hero .carousel-control-prev:focus,
+.hero .carousel-control-next:focus {
+  opacity: 0.5;
 }
-@media (max-width: 540px) {
+.hero .carousel-control-prev:hover,
+.hero .carousel-control-next:hover {
+  opacity: 0.9;
+}
+@media (min-width: 1024px) {
+  .hero .carousel-control-prev,
   .hero .carousel-control-next {
-    padding-right: 25px;
+    width: 5%;
   }
 }
 .hero .carousel-control-next-icon,
 .hero .carousel-control-prev-icon {
   background: none;
-  font-size: 16px;
-  line-height: 0;
-  background: rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.6);
-  border-radius: 50px;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 32px;
+  line-height: 1;
+}
+.hero .carousel-indicators {
+  list-style: none;
+}
+.hero .carousel-indicators li {
+  cursor: pointer;
 }
 
-.hero .carousel-control-prev,
-.hero .carousel-control-next {
-  z-index: 3;
-  transition: 0.3s;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
-
-.hero .carousel-control-prev:focus,
-.hero .carousel-control-next:focus {
-  opacity: 0.5;
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
-
-.hero .carousel-control-prev:hover,
-.hero .carousel-control-next:hover {
-  opacity: 0.9;
-}
-
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
