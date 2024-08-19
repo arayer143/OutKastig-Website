@@ -11,6 +11,7 @@
   }
 
   .social-links {
+    
     a {
       display: flex;
       align-items: center;
@@ -23,7 +24,7 @@
       font-size: 16px;
       color: color-mix(in srgb, $primary, transparent 20%);
       margin-right: 10px;
-      margin-bottom: 3rem,;
+      margin-bottom: 3rem;
       transition: 0.3s;
 
       :hover {

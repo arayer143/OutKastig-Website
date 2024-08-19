@@ -1,116 +1,59 @@
+// main: ../main.scss
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
 .about {
-
-  h2 {
-    font-size: 48px;
-    font-weight: 700;
-    text-align: center;
-    margin: 30px 0;
-    @media (min-width: 991px) {
-      max-width: 65%;
-      margin: 0 0 80px 0;
-    }
-  }
-
-  .our-story {
-    padding: 40px;
-    background-color: lighten($primary, 48);
-
-    @media (min-width: 991px) {
-      padding-right: 35%;
-    }
-
-    h4 {
-      text-transform: uppercase;
-      font-size: 18px;
-      color: $secondary;
-    }
-
-    h3 {
-      font-size: 36px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      color: $secondary;
-    }
-
-    p {
-      font-size: 18px;
-      color: black;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-
   ul {
     list-style: none;
     padding: 0;
-    font-size: 20px;
+
     li {
-      padding: 5px 0;
+      padding-bottom: 5px;
       display: flex;
       align-items: center;
     }
+
     i {
       font-size: 20px;
-      margin-right: 14px;
-      color: $secondary;
-    }
-  } 
-
-    
-
-  .about-img {
-    min-height: 600px;
-    background-size: cover;
-    background-position: center;
-    @media (min-width: 992px) {
-      position: absolute;
-      top: 0;
-      right: 0;
+      padding-right: 4px;
+      color: black;
     }
   }
 
 
-
-
-
-  .about-buttons{
-
-    display: inline-flex;
-
   .social-links {
+    text-align: center;
+
     a {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       justify-content: center;
       background: $secondary;
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      border: 1px solid color-mix(in srgb, $primary, transparent 50%);
+      border: 1px solid color-mix(in srgb, $primary, transparent 30%);
       font-size: 16px;
-      color: color-mix(in srgb, $primary, transparent 30%);
+      color: color-mix(in srgb, $primary, transparent 70%);
       margin-right: 10px;
+      margin-bottom: 3rem,;
       transition: 0.3s;
-  
+
       :hover {
         font-size: 20px;
       }
-  
+
       i{
         color:white;
       }
-  
+
       i:hover {
         color: $primary;
-     
       }
     }
   }
 
-  }
+
+
+  
 }
