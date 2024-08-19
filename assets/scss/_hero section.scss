@@ -12,6 +12,10 @@
       margin: 0;
       background-color: $primary;
       position: relative;
+
+      @media (max-width: 950px){
+        min-height: calc(75vh - 100px);
+      }
     }
   
     img {
@@ -22,6 +26,11 @@
       height: 90vh;
       object-fit: cover;
       z-index: 1;
+
+      @media (max-width: 950px){
+        object-fit: contain;
+        height: 60vh;
+      }
     }
   
     .carousel-item {
