@@ -147,6 +147,9 @@ background-color: $primary;
         margin-left: 5px;
       }
     }
+
+
+
   
     
   
@@ -239,6 +242,37 @@ background-color: $primary;
         }
       }
     }
+
+
+
+
+    .nav-btn{
+      
+   
+    
+      margin-left: 25px;
+
+    
+      
+      :hover{
+        background-color: $secondary;
+      }
+    
+      @media (max-width:991px){
+        margin-right: 20px;
+      }
+     
+      a{
+        padding: 8px 10px;
+        background-color: lighten($primary, 40);
+        border-radius: 2rem;
+        text-decoration: none;
+      }
+    
+    
+    
+    }
+     
   
   }
   

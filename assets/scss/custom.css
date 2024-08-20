@@ -255,6 +255,23 @@ h6 {
     left: -100%;
   }
 }
+#header .navbar .nav-btn {
+  margin-left: 25px;
+}
+#header .navbar .nav-btn :hover {
+  background-color: #000035;
+}
+@media (max-width: 991px) {
+  #header .navbar .nav-btn {
+    margin-right: 20px;
+  }
+}
+#header .navbar .nav-btn a {
+  padding: 8px 10px;
+  background-color: silver;
+  border-radius: 2rem;
+  text-decoration: none;
+}
 #header .mobile-nav-toggle {
   color: white;
   font-size: 28px;
