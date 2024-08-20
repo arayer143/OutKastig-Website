@@ -264,9 +264,10 @@ background-color: $primary;
      
       a{
         padding: 8px 10px;
-        background-color: lighten($primary, 40);
+        background-color: lighten($primary, 20);
         border-radius: 2rem;
         text-decoration: none;
+        
       }
     
     
