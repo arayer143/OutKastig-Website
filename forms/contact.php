@@ -19,7 +19,7 @@
   $contact->phone = $_POST['phone'];
   $contact->subject = 'New Message from Outkastindustrial.com';
   $contact->service = $_POST['service'];
-  $mail->AddAttachment($attachment['path'], $attachment['name']);
+
 
   // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
   /*
