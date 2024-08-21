@@ -19,6 +19,7 @@
   $contact->phone = $_POST['phone'];
   $contact->subject = 'New Message from Outkastindustrial.com';
   $contact->service = $_POST['service'];
+  $attachment = $_POST['attachment'];
 ;
 
 
