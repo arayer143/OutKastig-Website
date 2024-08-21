@@ -39,7 +39,7 @@
   $contact->add_message( $_POST['subject'], 'Company Name');
   $contact->add_message( $_POST['service'], 'Service Requested');
   $contact->add_message( $_POST['message'], 'Message');
-  $contact->add_message( $_POST['attachment'], 'Message');
+  $contact->add_message( $_POST['attachments'], 'Message');
 
 
 
