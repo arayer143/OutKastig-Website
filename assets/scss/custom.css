@@ -1442,10 +1442,10 @@ section {
   border: none;
 }
 .btn:hover {
-  background-color: brown;
+  background-color: #00009b;
 }
 .btn:focus {
-  outline: 1px dashed brown;
+  outline: 1px dashed #000035;
   outline-offset: 3px;
 }
 

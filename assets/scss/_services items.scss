@@ -300,7 +300,7 @@
   line-height: 22px;
 }
 
-.btn {
+.btn{
   cursor: pointer;
   margin-top: 20px;
   padding: 12px 25px;
@@ -313,11 +313,11 @@
   border: none;
   
   &:hover {
-    background-color: brown;
+    background-color: lighten($secondary, 20);
   }
   
   &:focus {
-    outline: 1px dashed brown;    
+    outline: 1px dashed $secondary;    
     outline-offset: 3px;
   }
 }
