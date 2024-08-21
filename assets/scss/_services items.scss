@@ -2,96 +2,10 @@
   # Services Section
   --------------------------------------------------------------*/
 
-.services{
-   a{
-    color: black;
-    text-align: center;
-    font-size: 19px;
-  }
-
-   .service-item{
-    padding: 40px;
-    background: #fff;
-    height: 100%;
-  
-  
-   .icon {
-    width: 48px;
-    height: 48px;
-  
-    position: relative;
-    margin-bottom: 50px;
-   
-    text-align: center;
- 
-  
-   .icon i {
-    color: $secondary;
-    font-size: 30px;
-    transition: ease-in-out 0.3s;
-    z-index: 2;
-    position: relative;
-    line-height: 1.8;
-    
-  }
-  
-   .icon:before {
-    position: absolute;
-    content: "";
-    height: 50px;
-    width: 50px;
-    background: #f0f1f2;
-    border-radius: 50px;
-    z-index: 1;
-  text-align: center;
-    
-    transition: 0.3s;
-
-
-    :hover  {
-      background: $primary;
-
-    }
-    
-  }
-
-}
-  
-   h3 {
-    color: black;
-    font-weight: 700;
-    margin: 0 0 20px 0;
-    padding-bottom: 8px;
-    font-size: 22px;
-    position: relative;
-    display: inline-block;
-    border-bottom: 2px solid #ebebed;
-    transition: 0.3s;
-
-     
-   :hover {
-    border-color: $primary;
-  }
-  }
-  
-   p {
-    line-height: 24px;
-    font-size: 16px;
-    margin-bottom: 0;
-  }
-  
-
-  
-
-
-}
-
-}
 
 
 
-
-.page-content {
+.services-page-content {
   display: grid;
   grid-gap: 1rem;
   padding: 1rem;
@@ -125,7 +39,7 @@
 
 }
 
-.card {  
+.services-card {  
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -281,7 +195,7 @@
   }
 
 
-.content {
+.services-content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -336,11 +250,11 @@
 }
 
 @media (hover: hover) {
-  .card:after {
+  .services-card:after {
     transform: translateY(0);
   }
   
-  .content {
+  .services-content {
     transform: translateY(calc(100% - 90px));
     
     > *:not(.title) {
@@ -352,14 +266,14 @@
     }
   }
   
-  .card:hover,
-  .card:focus-within {
+  .services-card:hover,
+  .services-card:focus-within {
     align-items: center;
 
     &:before { transform: translateY(-4%); }
     &:after { transform: translateY(-50%); }
 
-    .content {
+    .services-content {
       transform: translateY(0);
 
       > *:not(.title) {
@@ -370,11 +284,11 @@
     }
   }
   
-  .card:focus-within {
+  .services-card:focus-within {
     &:before,
     &:after,
-    .content,
-    .content > *:not(.title) {
+    .services-content,
+    .services-content > *:not(.title) {
       transition-duration: 0s;
     }
   }

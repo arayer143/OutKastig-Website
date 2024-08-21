@@ -1248,66 +1248,7 @@ section {
 /*--------------------------------------------------------------
   # Services Section
   --------------------------------------------------------------*/
-.services a {
-  color: black;
-  text-align: center;
-  font-size: 19px;
-}
-.services .service-item {
-  padding: 40px;
-  background: #fff;
-  height: 100%;
-}
-.services .service-item .icon {
-  width: 48px;
-  height: 48px;
-  position: relative;
-  margin-bottom: 50px;
-  text-align: center;
-}
-.services .service-item .icon .icon i {
-  color: #000035;
-  font-size: 30px;
-  transition: ease-in-out 0.3s;
-  z-index: 2;
-  position: relative;
-  line-height: 1.8;
-}
-.services .service-item .icon .icon:before {
-  position: absolute;
-  content: "";
-  height: 50px;
-  width: 50px;
-  background: #f0f1f2;
-  border-radius: 50px;
-  z-index: 1;
-  text-align: center;
-  transition: 0.3s;
-}
-.services .service-item .icon .icon:before :hover {
-  background: rgb(90, 90, 90);
-}
-.services .service-item h3 {
-  color: black;
-  font-weight: 700;
-  margin: 0 0 20px 0;
-  padding-bottom: 8px;
-  font-size: 22px;
-  position: relative;
-  display: inline-block;
-  border-bottom: 2px solid #ebebed;
-  transition: 0.3s;
-}
-.services .service-item h3 :hover {
-  border-color: rgb(90, 90, 90);
-}
-.services .service-item p {
-  line-height: 24px;
-  font-size: 16px;
-  margin-bottom: 0;
-}
-
-.page-content {
+.services-page-content {
   display: grid;
   grid-gap: 1rem;
   padding: 1rem;
@@ -1317,24 +1258,24 @@ section {
   grid-template-columns: repeat(3, 1fr);
 }
 @media (max-width: 1300px) {
-  .page-content {
+  .services-page-content {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 800px) {
-  .page-content {
+  .services-page-content {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 @media (max-width: 500px) {
-  .page-content {
+  .services-page-content {
     grid-template-columns: repeat(1, 1fr);
     max-width: 90%;
     padding: 0;
   }
 }
 @media (max-width: 350px) {
-  .page-content {
+  .services-page-content {
     grid-template-columns: repeat(1, 1fr);
     max-width: 100%;
     padding: 0;
@@ -1342,7 +1283,7 @@ section {
   }
 }
 
-.card {
+.services-card {
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -1355,11 +1296,11 @@ section {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 600px) {
-  .card {
+  .services-card {
     height: 550px;
   }
 }
-.card:before {
+.services-card:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1371,7 +1312,7 @@ section {
   transition: transform 1.05s cubic-bezier(0.19, 1, 0.22, 1);
   pointer-events: none;
 }
-.card:after {
+.services-card:after {
   content: "Tap for More";
   display: block;
   position: absolute;
@@ -1418,7 +1359,7 @@ section {
   background-image: url("../img/employee.jpg");
 }
 
-.content {
+.services-content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1428,7 +1369,7 @@ section {
   transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
   z-index: 1;
 }
-.content > * + * {
+.services-content > * + * {
   margin-top: 1rem;
 }
 
@@ -1465,42 +1406,42 @@ section {
 }
 
 @media (hover: hover) {
-  .card:after {
+  .services-card:after {
     transform: translateY(0);
   }
-  .content {
+  .services-content {
     transform: translateY(calc(100% - 90px));
   }
-  .content > *:not(.title) {
+  .services-content > *:not(.title) {
     opacity: 0;
     transform: translateY(0.5rem);
     transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.7s cubic-bezier(0.19, 1, 0.22, 1);
   }
-  .card:hover,
-  .card:focus-within {
+  .services-card:hover,
+  .services-card:focus-within {
     align-items: center;
   }
-  .card:hover:before,
-  .card:focus-within:before {
+  .services-card:hover:before,
+  .services-card:focus-within:before {
     transform: translateY(-4%);
   }
-  .card:hover:after,
-  .card:focus-within:after {
+  .services-card:hover:after,
+  .services-card:focus-within:after {
     transform: translateY(-50%);
   }
-  .card:hover .content,
-  .card:focus-within .content {
+  .services-card:hover .services-content,
+  .services-card:focus-within .services-content {
     transform: translateY(0);
   }
-  .card:hover .content > *:not(.title),
-  .card:focus-within .content > *:not(.title) {
+  .services-card:hover .services-content > *:not(.title),
+  .services-card:focus-within .services-content > *:not(.title) {
     opacity: 1;
     transform: translateY(0);
     transition-delay: 0.0875s;
   }
-  .card:focus-within:before, .card:focus-within:after,
-  .card:focus-within .content,
-  .card:focus-within .content > *:not(.title) {
+  .services-card:focus-within:before, .services-card:focus-within:after,
+  .services-card:focus-within .services-content,
+  .services-card:focus-within .services-content > *:not(.title) {
     transition-duration: 0s;
   }
 }
