@@ -19,7 +19,7 @@
   $contact->phone = $_POST['phone'];
   $contact->subject = 'New Message from Outkastindustrial.com';
   $contact->service = $_POST['service'];
-  $mail->addAttachment($_FILES['file']['tmp_name'], $_FILES['file']['name']);
+ 
 
 ;
 
@@ -41,7 +41,7 @@
   $contact->add_message( $_POST['subject'], 'Company Name');
   $contact->add_message( $_POST['service'], 'Service Requested');
   $contact->add_message( $_POST['message'], 'Message');
-  $contact->add_attachment( $_POST['file'], 'Attachment');
+
  
 
 

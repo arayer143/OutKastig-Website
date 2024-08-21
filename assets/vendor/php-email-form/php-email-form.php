@@ -222,7 +222,7 @@ class PHP_Email_Form {
       // Attachments
       if(count($this->attachments) > 0) {
         foreach($this->attachments as $attachment) {
-          $mail->AddAttachment($attachment['path'], $attachment['name']);
+          $mail->AddAttachment($attachment['file'], $attachment['attachment']);
         }
       }
 
