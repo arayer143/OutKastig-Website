@@ -143,14 +143,14 @@
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: 0 0;
+    background-position: center;
     transition: transform calc(0.7s * 1.5) cubic-bezier(0.19, 1, 0.22, 1);;
     pointer-events: none;
 
   }
   
   &:after {
-    content: '';
+    content: 'Tap for More';
     display: block;
     position: absolute;
     top: 0;
@@ -195,19 +195,77 @@
 
   &:before{
     
-      background-image: url("https://images.pexels.com/photos/189349/pexels-photo-189349.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-image: url('../img/container-cleaning.jpg');
     }
   }
 
 
-  .card-2 {
+.card-2 {
    
 
-    &:before{
+  &:before{
       
-        background-image: url('../img/employee.jpg');
-      }
+       background-image: url('../img/Pressure_Washing_of_Tank_Exterior.jpg');
+       background-size: cover;
     }
+  }
+
+.card-3 {
+   
+
+  &:before{
+      
+       background-image: url('../img/vac_truck_2.jpg');
+    }
+  }
+
+.card-4 {
+   
+
+  &:before{
+        
+       background-image: url('../img/outkast-banner.jpg');
+    }
+  }
+
+
+.card-5 {
+   
+
+  &:before{
+        
+        background-image: url('../img/Opening_of_a_Carbon-Tetrachloride_Tank.jpg');
+    }
+  }
+
+.card-6 {
+   
+
+  &:before{
+          
+        background-image: url('../img/hazmat.jpg');
+     }
+  }
+
+
+.card-7 {
+   
+
+  &:before{
+            
+        background-image: url('../img/Transfer_of_Leaking_Tanker.jpg');
+      }
+  }
+
+
+.card-8 {
+   
+
+  &:before{
+              
+         background-image: url('../img/employee.jpg');
+      }
+  }
 
 
 .content {
