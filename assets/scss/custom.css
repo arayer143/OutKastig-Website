@@ -1326,6 +1326,21 @@ section {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+@media (max-width: 500px) {
+  .page-content {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 90%;
+    padding: 0;
+  }
+}
+@media (max-width: 350px) {
+  .page-content {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 100%;
+    padding: 0;
+    margin: 0 0;
+  }
+}
 
 .card {
   position: relative;
