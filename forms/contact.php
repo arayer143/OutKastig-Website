@@ -42,6 +42,7 @@
   $contact->add_message( $_POST['subject'], 'Company Name');
   $contact->add_message( $_POST['service'], 'Service Requested');
   $contact->add_message( $_POST['message'], 'Message');
+  $contact->add_attachment('resume', 20, array('pdf', 'doc', 'docx', 'rtf'));
 
 
  
