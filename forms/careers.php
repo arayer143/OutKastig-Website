@@ -18,7 +18,7 @@
   $contact->from_email = $_POST['email'];
   $contact->phone = $_POST['phone'];
   $contact->subject = 'New Message from Outkastindustrial.com';
-  $contact->service = $_POST['service'];
+
 
  
 
