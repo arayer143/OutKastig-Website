@@ -21,7 +21,7 @@ class PHP_Email_Form {
   public $mailer = false;
   public $smtp = false;
   public $message = '';
-  public $attachments = [];
+
 
   public $content_type = 'text/html';
   public $charset = 'utf-8';
@@ -45,7 +45,7 @@ class PHP_Email_Form {
   );
 
   private $error = false;
-
+  private $attachments = [];
 
   public function __construct() {
     $this->mailer = "forms@" . @preg_replace('/^www\./','', $_SERVER['SERVER_NAME']);
