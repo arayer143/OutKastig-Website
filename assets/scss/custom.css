@@ -775,6 +775,9 @@ h6 {
 /*--------------------------------------------------------------
 # About Section on index.html
 --------------------------------------------------------------*/
+.about-intro {
+  margin-bottom: -5rem;
+}
 .about-intro h2 {
   color: rgb(90, 90, 90);
   font-weight: 700;
@@ -833,15 +836,23 @@ h6 {
   color: #000035;
 }
 .about-intro .content-title {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 8px 10px 10px 8px #888888;
+}
+.about-intro .content-title h2 {
   color: #000035;
   font-weight: 600;
-  text-align: left;
-  font-size: 30px;
+  text-align: center;
+  font-size: 25px;
 }
 @media (max-width: 994px) {
-  .about-intro .content-title {
+  .about-intro .content-title h2 {
     text-align: center;
   }
+}
+.about-intro h5 {
+  text-align: center;
 }
 
 /*--------------------------------------------------------------

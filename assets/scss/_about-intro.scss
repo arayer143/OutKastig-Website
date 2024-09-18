@@ -3,6 +3,7 @@
 --------------------------------------------------------------*/
 .about-intro {
 
+  margin-bottom: -5rem;
 
   
   h2{
@@ -81,18 +82,34 @@
       color: $secondary;
     }
   
+
     .content-title {
+      background-color: white;
+      padding: 20px;
+      box-shadow: 8px 10px 10px 8px #888888;
+    }
+    .content-title h2{
         color: $secondary;
       font-weight: 600;
-      text-align: left;
-      font-size: 30px;
+      text-align: center;
+      font-size: 25px;
 
       @media (max-width:994px)  {
         text-align: center;
       }
+    }
+
+
+    h5{
+      text-align: center;
+    }
+
+
+
+
       
   
     
     }
 
-  }
+  
