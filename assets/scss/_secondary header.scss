@@ -4,6 +4,7 @@
   .secondary-page-header {
     padding: 140px 0 60px 0;
     min-height: 30vh;
+    font-size: 20px;
     position: relative;
     background-color: $primary;
     background-size: cover;
@@ -19,9 +20,12 @@
   }
   
   .secondary-page-header h2 {
-    font-size: 56px;
+    font-size: 36px;
+   float: left;
     font-weight: 500;
-    color: #fff;
+    color: whitesmoke;
+    text-decoration: underline 3px;
+    text-underline-offset: 8px;
     
 
   }
