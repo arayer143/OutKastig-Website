@@ -1,14 +1,35 @@
 /*--------------------------------------------------------------
 # About Section on index.html
 --------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
 .about-intro {
 
-  margin-bottom: -5rem;
+  margin-bottom: -6rem;
+
+
+  h1{
+    font-size: 28px;
+    font-weight: 700;
+ 
+  }
+
+
 
   
   h2{
-    color: $primary;
+    color: black;
     font-weight: 700;
+    font-size: 28px;
+
   }
 
   .social-links {
@@ -49,8 +70,10 @@
       padding: 7rem 0;
   
       .img-overlap {
-        margin-top: -170px;
+        margin-top: -5px;
         padding: 1rem;
+  
+  
       }
 
 
@@ -86,7 +109,79 @@
     .content-title {
       background-color: white;
       padding: 20px;
+      font-size: 25px;
       box-shadow: 8px 10px 10px 8px #888888;
+    }
+
+
+    .about-icon-boxes {
+
+      h4 {
+        font-size: 18px;
+        color: lighten($secondary, 20);
+        margin-bottom: 15px;
+      }
+  
+      h3 {
+        font-size: 28px;
+        font-weight: 700;
+        color: lighten($secondary, 5);
+        margin-bottom: 15px;
+      }
+    }
+    
+  
+    .about-icon-box {
+      margin-top: 40px;
+  
+      .about-icon {
+        float: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        border: 2px solid lighten($primary, 30);
+        border-radius: 50px;
+        transition: 0.5s;
+        background: white;
+    
+        i {
+          color: $primary;
+          font-size: 32px;
+        }
+    
+      }
+    
+      &:hover .about-icon {
+        background: $primary;
+        border-color: $primary;
+        i {
+          color: white;
+        }
+    
+      }
+
+        
+    .about-service-title {
+      margin-left: 85px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-size: 18px;
+      a {
+        color: black;
+        transition: 0.3s;
+        &:hover {
+          color: $primary;
+        }
+      }
+  
+    }
+
+    .about-service-description {
+      margin-left: 85px;
+      line-height: 24px;
+      font-size: 14px;
     }
     .content-title h2{
         color: $secondary;
@@ -104,12 +199,8 @@
       text-align: center;
     }
 
-
-
-
-      
   
     
     }
 
-  
+}

@@ -776,11 +776,16 @@ h6 {
 # About Section on index.html
 --------------------------------------------------------------*/
 .about-intro {
-  margin-bottom: -5rem;
+  margin-bottom: -6rem;
+}
+.about-intro h1 {
+  font-size: 28px;
+  font-weight: 700;
 }
 .about-intro h2 {
-  color: rgb(90, 90, 90);
+  color: black;
   font-weight: 700;
+  font-size: 28px;
 }
 .about-intro .social-links a {
   display: flex;
@@ -812,7 +817,7 @@ h6 {
   padding: 7rem 0;
 }
 .about-intro .content .img-overlap {
-  margin-top: -170px;
+  margin-top: -5px;
   padding: 1rem;
 }
 .about-intro .content .btn {
@@ -838,20 +843,76 @@ h6 {
 .about-intro .content-title {
   background-color: white;
   padding: 20px;
+  font-size: 25px;
   box-shadow: 8px 10px 10px 8px #888888;
 }
-.about-intro .content-title h2 {
+.about-intro .about-icon-boxes h4 {
+  font-size: 18px;
+  color: #00009b;
+  margin-bottom: 15px;
+}
+.about-intro .about-icon-boxes h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #00004f;
+  margin-bottom: 15px;
+}
+.about-intro .about-icon-box {
+  margin-top: 40px;
+}
+.about-intro .about-icon-box .about-icon {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border: 2px solid #a7a7a7;
+  border-radius: 50px;
+  transition: 0.5s;
+  background: white;
+}
+.about-intro .about-icon-box .about-icon i {
+  color: rgb(90, 90, 90);
+  font-size: 32px;
+}
+.about-intro .about-icon-box:hover .about-icon {
+  background: rgb(90, 90, 90);
+  border-color: rgb(90, 90, 90);
+}
+.about-intro .about-icon-box:hover .about-icon i {
+  color: white;
+}
+.about-intro .about-icon-box .about-service-title {
+  margin-left: 85px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.about-intro .about-icon-box .about-service-title a {
+  color: black;
+  transition: 0.3s;
+}
+.about-intro .about-icon-box .about-service-title a:hover {
+  color: rgb(90, 90, 90);
+}
+.about-intro .about-icon-box .about-service-description {
+  margin-left: 85px;
+  line-height: 24px;
+  font-size: 14px;
+}
+.about-intro .about-icon-box .content-title h2 {
   color: #000035;
   font-weight: 600;
   text-align: center;
   font-size: 25px;
 }
 @media (max-width: 994px) {
-  .about-intro .content-title h2 {
+  .about-intro .about-icon-box .content-title h2 {
     text-align: center;
   }
 }
-.about-intro h5 {
+.about-intro .about-icon-box h5 {
   text-align: center;
 }
 
