@@ -259,7 +259,7 @@ h6 {
   margin-left: 25px;
 }
 #header .navbar .nav-btn :hover {
-  background-color: #000035;
+  background-color: #7e7c7c;
 }
 @media (max-width: 991px) {
   #header .navbar .nav-btn {
@@ -268,9 +268,10 @@ h6 {
 }
 #header .navbar .nav-btn a {
   padding: 8px 10px;
-  background-color: #8d8d8d;
+  background-color: #f3f3f3;
   border-radius: 2rem;
   text-decoration: none;
+  color: black;
 }
 #header .mobile-nav-toggle {
   color: white;
@@ -1223,6 +1224,35 @@ section {
   background: #000035;
   bottom: 0;
   left: calc(50% - 20px);
+}
+
+.section-header {
+  text-align: center;
+  padding-bottom: 70px;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  position: relative;
+  color: #2e3135;
+}
+
+.section-header h2:before,
+.section-header h2:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: rgb(90, 90, 90);
+  display: inline-block;
+}
+
+.section-header h2:before {
+  margin: 0 15px 10px 0;
+}
+
+.section-header h2:after {
+  margin: 0 0 10px 15px;
 }
 
 .section-header p {
