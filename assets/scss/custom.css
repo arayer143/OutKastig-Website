@@ -1141,6 +1141,9 @@ h6 {
   margin-bottom: 0;
 }
 
+/*----------------------------------------------------------------
+h1 header for each page 
+-----------------------------------------------------------------*/
 /*--------------------------------------------------------------
   # Sections & Section Header
   --------------------------------------------------------------*/
@@ -1190,33 +1193,36 @@ section {
   left: calc(50% - 20px);
 }
 
-.section-header {
-  text-align: center;
-  padding-bottom: 70px;
-}
-
-.section-header h2 {
-  font-size: 32px;
-  font-weight: 700;
+.section-title h1 {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
   position: relative;
-  color: #2e3135;
+  color: rgb(56, 56, 56);
 }
 
-.section-header h2:before,
-.section-header h2:after {
+.section-title h1::before {
   content: "";
-  width: 50px;
-  height: 2px;
-  background: rgb(90, 90, 90);
-  display: inline-block;
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
 }
 
-.section-header h2:before {
-  margin: 0 15px 10px 0;
-}
-
-.section-header h2:after {
-  margin: 0 0 10px 15px;
+.section-title h1::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #000035;
+  bottom: 0;
+  left: calc(50% - 20px);
 }
 
 .section-header p {
@@ -1285,6 +1291,9 @@ section {
     height: 40vh;
   }
 }
+#alternate-page-title h1 {
+  color: white;
+}
 #alternate-page-title:before {
   content: "";
   position: absolute;
@@ -1300,7 +1309,7 @@ section {
   display: inline;
   max-width: 200px;
 }
-#alternate-page-title .text-box h2 {
+#alternate-page-title .text-box h1 {
   font-size: 36px;
   font-weight: bold;
   color: #fff;
@@ -1619,6 +1628,11 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+h1 {
+  color: white;
+  font-size: 30px;
 }
 
 .secondary-page-header:before {

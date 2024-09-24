@@ -1,6 +1,19 @@
+
+
+
+/*----------------------------------------------------------------
+h1 header for each page 
+-----------------------------------------------------------------*/
+
+
+
+
+
 /*--------------------------------------------------------------
   # Sections & Section Header
   --------------------------------------------------------------*/
+
+
   section {
     padding: 80px 0;
     overflow: hidden;
@@ -11,10 +24,13 @@
   }
 
 
+
+
   .section-title {
     text-align: center;
     padding-bottom: 30px;
   }
+
   .section-title h2 {
     font-size: 22px;
     font-weight: bold;
@@ -44,37 +60,39 @@
     bottom: 0;
     left: calc(50% - 20px);
   }
-  
-  
-  .section-header {
-    text-align: center;
-    padding-bottom: 70px;
-  }
-  
-  .section-header h2 {
-    font-size: 32px;
-    font-weight: 700;
+
+  .section-title h1 {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
     position: relative;
-    color: #2e3135;
+    color: rgb(56, 56, 56);
   }
-  
-  .section-header h2:before,
-  .section-header h2:after {
+  .section-title h1::before {
     content: "";
-    width: 50px;
-    height: 2px;
-    background: $primary;
-    display: inline-block;
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+  }
+  .section-title h1::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: $secondary;
+    bottom: 0;
+    left: calc(50% - 20px);
   }
   
-  .section-header h2:before {
-    margin: 0 15px 10px 0;
-  }
   
-  .section-header h2:after {
-    margin: 0 0 10px 15px;
-  }
-  
+ 
   .section-header p {
     margin: 0 auto 0 auto;
   }
@@ -160,6 +178,9 @@
   }
 
 
+  h1{
+    color:white;
+  }
 
   &:before {
     content: "";
@@ -184,7 +205,7 @@
  
 
 
-  h2 {
+  h1 {
     font-size: 36px;
     font-weight: bold;
     color: #fff;
