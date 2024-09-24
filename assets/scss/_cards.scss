@@ -1,6 +1,8 @@
 
-.service-card .list:hover .content .content-inner h5{
-    color:black
+.service-card .list .content .content-inner h3{
+    color:black;
+    font-size: 18px;
+    text-align: center;
   }
   
   
@@ -54,7 +56,7 @@
   
   }
 
-  .service-card .list .content h5{
+  .service-card .list .content h3{
     color: $secondary;
     text-align: center;
     
@@ -101,9 +103,33 @@
     color: black;
     z-index: 9;
   }
-  .service-card .list:hover .content .content-inner h5 {
+  .service-card .list:hover .content .content-inner h3 {
     color: black;
     text-decoration: underline 2px black;
+    
+  }
+
+  .services-btn{
+    background-color: lighten($default, 40);
+    color: black;
+    border-radius: 3rem;
+    margin-top: 3rem;
+    text-align: center;
+    padding: 12px 30px;
+    
+  
+
+  }
+  .services-btn a{
+text-align: center;
+
+
+color: black;
+align-items: center;
+  }
+
+  .services-btn a::hover{
+    background-color: $secondary;
   }
   
   /*** Service End ***/

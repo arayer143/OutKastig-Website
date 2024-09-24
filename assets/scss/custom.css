@@ -788,6 +788,11 @@ h6 {
   font-weight: 700;
   font-size: 28px;
 }
+.about-intro p {
+  margin-left: 45px;
+  line-height: 24px;
+  font-size: 17px;
+}
 .about-intro .social-links a {
   display: flex;
   align-items: center;
@@ -913,7 +918,7 @@ h6 {
     text-align: center;
   }
 }
-.about-intro .about-icon-box h5 {
+.about-intro .about-icon-box h3 {
   text-align: center;
 }
 
@@ -1122,21 +1127,21 @@ h6 {
   font-weight: 700;
   margin-bottom: 20px;
 }
-.more-features .icon-box {
+.more-features .about-icon-box {
   margin-top: 30px;
 }
-.more-features .icon-box i {
+.more-features .about-icon-box i {
   color: var(--accent-color);
   margin-right: 15px;
   font-size: 24px;
   line-height: 1.2;
 }
-.more-features .icon-box h4 {
+.more-features .about-icon-box h4 {
   font-weight: 600;
   margin-bottom: 10px;
   font-size: 18px;
 }
-.more-features .icon-box p {
+.more-features .about-icon-box p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
@@ -1555,8 +1560,10 @@ section {
     transition-duration: 0s;
   }
 }
-.service-card .list:hover .content .content-inner h5 {
+.service-card .list .content .content-inner h3 {
   color: black;
+  font-size: 18px;
+  text-align: center;
 }
 
 .service-card .list {
@@ -1602,7 +1609,7 @@ section {
   z-index: 2;
 }
 
-.service-card .list .content h5 {
+.service-card .list .content h3 {
   color: #000035;
   text-align: center;
 }
@@ -1639,10 +1646,29 @@ section {
   z-index: 9;
 }
 
-.service-card .list:hover .content .content-inner h5 {
+.service-card .list:hover .content .content-inner h3 {
   color: black;
   -webkit-text-decoration: underline 2px black;
           text-decoration: underline 2px black;
+}
+
+.services-btn {
+  background-color: #989595;
+  color: black;
+  border-radius: 3rem;
+  margin-top: 3rem;
+  text-align: center;
+  padding: 12px 30px;
+}
+
+.services-btn a {
+  text-align: center;
+  color: black;
+  align-items: center;
+}
+
+.services-btn a::hover {
+  background-color: #000035;
 }
 
 /*** Service End ***/
